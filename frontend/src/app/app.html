@@ -1,0 +1,363 @@
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="RenewalReady home">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 36 36" role="img">
+        <path d="M6 17.5 18 7l12 10.5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-11Z" />
+        <path d="M13 30V20h10v10M10 14V8h5v1.6" />
+      </svg>
+    </span>
+    <span>Renewal<span>Ready</span></span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#calculator">Calculator</a>
+    <a href="#methodology">How it works</a>
+  </nav>
+  <a class="header-cta" href="#calculator">Compare offers</a>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Built for Canadian homeowners</p>
+      <h1 id="page-title">Make your mortgage renewal <em>make sense.</em></h1>
+      <p class="hero-intro">
+        Compare lender offers, payment schedules and prepayments side by side—before you
+        commit to your next term.
+      </p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#calculator">
+          Compare my offers
+          <span aria-hidden="true">↗</span>
+        </a>
+        <span class="privacy-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 10V8a5 5 0 0 1 10 0v2m-11 0h12v10H6V10Z" />
+          </svg>
+          No sign-up. No personal data.
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="Example mortgage comparison">
+      <div class="visual-glow"></div>
+      <div class="summary-card card-back">
+        <span>Balance after 5 years</span>
+        <strong>$356,840</strong>
+      </div>
+      <div class="summary-card card-main">
+        <div class="card-heading">
+          <span class="mini-icon">⌂</span>
+          <span>Renewal snapshot</span>
+          <span class="status-dot">Live estimate</span>
+        </div>
+        <p>Estimated payment</p>
+        <strong>$2,421<span>/mo</span></strong>
+        <div class="chart" aria-hidden="true">
+          <span style="height: 42%"></span><span style="height: 51%"></span>
+          <span style="height: 46%"></span><span style="height: 61%"></span>
+          <span style="height: 69%"></span><span class="active" style="height: 83%"></span>
+          <span class="active" style="height: 76%"></span><span class="active" style="height: 94%"></span>
+        </div>
+        <div class="chart-labels"><span>Year 1</span><span>Year 5</span></div>
+      </div>
+      <div class="rate-pill"><span>↓</span> Save with prepayments</div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="Product benefits">
+    <div><strong>Clear</strong><span>Side-by-side comparisons</span></div>
+    <div><strong>Canadian</strong><span>Semi-annual rate math</span></div>
+    <div><strong>Private</strong><span>Nothing sold or shared</span></div>
+  </section>
+
+  <section class="calculator-section" id="calculator" aria-labelledby="calculator-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow"><span></span> Renewal comparison</p>
+        <h2 id="calculator-title">Put your offers to the test.</h2>
+      </div>
+      <p>Use the details from your renewal letters. You can compare up to three offers.</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="compareOffers()" novalidate>
+      <div class="mortgage-details form-panel">
+        <div class="panel-title">
+          <span>1</span>
+          <div>
+            <h3>Your mortgage</h3>
+            <p>Tell us where your mortgage stands today.</p>
+          </div>
+        </div>
+        <div class="base-fields">
+          <label>
+            <span>Remaining balance</span>
+            <div class="input-with-prefix">
+              <span>$</span>
+              <input
+                type="number"
+                formControlName="principal"
+                min="1000"
+                step="1000"
+                inputmode="decimal"
+                aria-describedby="principal-help"
+              />
+            </div>
+            <small id="principal-help">Before any renewal-date prepayment</small>
+            @if (form.controls.principal.touched && form.controls.principal.invalid) {
+              <span class="field-error">Enter a balance between $1,000 and $10 million.</span>
+            }
+          </label>
+          <label>
+            <span>Remaining amortization</span>
+            <div class="input-with-suffix">
+              <input
+                type="number"
+                formControlName="remainingAmortizationYears"
+                min="1"
+                max="40"
+                inputmode="numeric"
+              />
+              <span>years</span>
+            </div>
+            <small>Not the length of your next term</small>
+            @if (
+              form.controls.remainingAmortizationYears.touched &&
+              form.controls.remainingAmortizationYears.invalid
+            ) {
+              <span class="field-error">Enter between 1 and 40 years.</span>
+            }
+          </label>
+        </div>
+      </div>
+
+      <div class="offers-panel form-panel">
+        <div class="panel-title offers-title">
+          <span>2</span>
+          <div>
+            <h3>Your renewal offers</h3>
+            <p>Add the rate and payment details each lender gave you.</p>
+          </div>
+          <button type="button" class="add-button" (click)="addOffer()" [disabled]="offers.length >= 3">
+            <span aria-hidden="true">＋</span> Add offer
+          </button>
+        </div>
+
+        <div class="offer-list" formArrayName="offers">
+          @for (offer of offers.controls; track offer; let index = $index) {
+            <article class="offer-card" [formGroupName]="index">
+              <div class="offer-card-header">
+                <span class="offer-number">{{ index + 1 }}</span>
+                <label>
+                  <span class="sr-only">Offer name</span>
+                  <input type="text" formControlName="name" maxlength="60" />
+                </label>
+                @if (offers.length > 1) {
+                  <button
+                    type="button"
+                    class="remove-button"
+                    (click)="removeOffer(index)"
+                    [attr.aria-label]="'Remove ' + offer.controls.name.value"
+                  >
+                    Remove
+                  </button>
+                }
+              </div>
+
+              <div class="offer-fields">
+                <label>
+                  <span>Annual interest rate</span>
+                  <div class="input-with-suffix">
+                    <input
+                      type="number"
+                      formControlName="annualInterestRate"
+                      min="0"
+                      max="25"
+                      step="0.01"
+                      inputmode="decimal"
+                    />
+                    <span>%</span>
+                  </div>
+                </label>
+                <label>
+                  <span>Term</span>
+                  <select formControlName="termMonths">
+                    <option [ngValue]="12">1 year</option>
+                    <option [ngValue]="24">2 years</option>
+                    <option [ngValue]="36">3 years</option>
+                    <option [ngValue]="48">4 years</option>
+                    <option [ngValue]="60">5 years</option>
+                    <option [ngValue]="84">7 years</option>
+                    <option [ngValue]="120">10 years</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Payment frequency</span>
+                  <select formControlName="paymentFrequency">
+                    @for (frequency of frequencyOptions; track frequency.value) {
+                      <option [value]="frequency.value">{{ frequency.label }}</option>
+                    }
+                  </select>
+                </label>
+                <label>
+                  <span>Lump sum at renewal</span>
+                  <div class="input-with-prefix">
+                    <span>$</span>
+                    <input
+                      type="number"
+                      formControlName="lumpSumPayment"
+                      min="0"
+                      step="500"
+                      inputmode="decimal"
+                    />
+                  </div>
+                </label>
+                <label>
+                  <span>Extra each payment</span>
+                  <div class="input-with-prefix">
+                    <span>$</span>
+                    <input
+                      type="number"
+                      formControlName="additionalPaymentPerPeriod"
+                      min="0"
+                      step="25"
+                      inputmode="decimal"
+                    />
+                  </div>
+                </label>
+              </div>
+
+              @if (offer.touched && offer.invalid) {
+                <p class="offer-error">Complete this offer with values in the allowed ranges.</p>
+              }
+            </article>
+          }
+        </div>
+      </div>
+
+      @if (errorMessage()) {
+        <div class="alert" role="alert"><span>!</span>{{ errorMessage() }}</div>
+      }
+
+      <div class="submit-row">
+        <button class="submit-button" type="submit" [disabled]="loading()">
+          @if (loading()) {
+            <span class="spinner" aria-hidden="true"></span> Comparing offers…
+          } @else {
+            Compare my renewal offers <span aria-hidden="true">→</span>
+          }
+        </button>
+        <p>Estimates only. No financial advice or lender affiliation.</p>
+      </div>
+    </form>
+  </section>
+
+  @if (comparison(); as data) {
+    <section class="results-section" id="results" aria-labelledby="results-title">
+      <div class="results-heading">
+        <div>
+          <p class="eyebrow light"><span></span> Your comparison</p>
+          <h2 id="results-title">A clearer view of your next term.</h2>
+        </div>
+        <p>Based on a {{ data.principal | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }} balance</p>
+      </div>
+
+      <div class="result-cards">
+        @for (result of data.results; track result.name; let index = $index) {
+          <article class="result-card" [class.best-result]="isLowestInterest(result)">
+            @if (isLowestInterest(result)) {
+              <span class="best-badge">Lowest term interest</span>
+            }
+            <div class="result-name"><span>{{ index + 1 }}</span>{{ result.name }}</div>
+            <div class="payment-amount">
+              <small>Regular payment</small>
+              <strong>{{ result.regularPayment | currency: 'CAD' : 'symbol-narrow' : '1.2-2' }}</strong>
+              <span>{{ frequencyLabel(result.paymentFrequency) }}</span>
+            </div>
+            @if (result.additionalPaymentPerPeriod > 0) {
+              <p class="extra-payment">
+                + {{ result.additionalPaymentPerPeriod | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }} extra each payment
+              </p>
+            }
+            <dl>
+              <div>
+                <dt>Interest during term</dt>
+                <dd>{{ result.interestPaidDuringTerm | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }}</dd>
+              </div>
+              <div>
+                <dt>Principal paid</dt>
+                <dd>{{ result.principalPaidDuringTerm | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }}</dd>
+              </div>
+              <div>
+                <dt>Balance after term</dt>
+                <dd>{{ result.balanceAtTermEnd | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }}</dd>
+              </div>
+            </dl>
+            <div class="result-meta">
+              <span>{{ result.annualInterestRate | number: '1.2-3' }}%</span>
+              <span>{{ result.termMonths / 12 | number: '1.0-1' }}-year term</span>
+              @if (result.lumpSumPayment > 0) {
+                <span>{{ result.lumpSumPayment | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }} lump sum</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="interest-comparison">
+        <div>
+          <h3>Interest paid during each term</h3>
+          <p>A shorter term is not directly comparable to a longer term; use this with the balances above.</p>
+        </div>
+        <div class="bars">
+          @for (result of data.results; track result.name) {
+            <div class="bar-row">
+              <span>{{ result.name }}</span>
+              <div class="bar-track">
+                <span [style.width.%]="interestBarWidth(result)"></span>
+              </div>
+              <strong>{{ result.interestPaidDuringTerm | currency: 'CAD' : 'symbol-narrow' : '1.0-0' }}</strong>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  <section class="methodology" id="methodology" aria-labelledby="methodology-title">
+    <div>
+      <p class="eyebrow"><span></span> Transparent by design</p>
+      <h2 id="methodology-title">Know what is behind the numbers.</h2>
+    </div>
+    <div class="method-grid">
+      <article>
+        <span>01</span>
+        <h3>Canadian rate convention</h3>
+        <p>Fixed rates use nominal annual interest compounded semi-annually, not in advance.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Payment simulation</h3>
+        <p>Every payment is simulated through the selected term, including lump sums and additional payments.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Your details stay yours</h3>
+        <p>The MVP performs comparisons without user accounts, credit checks or bank connections.</p>
+      </article>
+    </div>
+    <p class="disclaimer">
+      RenewalReady provides educational estimates, not financial advice. Actual lender calculations,
+      prepayment rules and variable-rate conventions may differ. Confirm all figures with your lender
+      or a qualified mortgage professional.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="#top">
+    <span class="brand-mark" aria-hidden="true">⌂</span>
+    <span>Renewal<span>Ready</span></span>
+  </a>
+  <p>Open-source mortgage comparison tools for Canadians.</p>
+  <span>© {{ currentYear }} RenewalReady</span>
+</footer>

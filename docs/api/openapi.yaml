@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: RenewalReady Comparison API
+  version: 1.0.0
+  description: Stateless Canadian fixed-mortgage renewal comparison API.
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/v1/mortgage-comparisons:
+    post:
+      summary: Compare one to three mortgage renewal offers
+      operationId: compareMortgageOffers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComparisonRequest'
+      responses:
+        '200':
+          description: Calculated offer comparison
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComparisonResponse'
+        '400':
+          description: Request validation failed
+        '422':
+          description: A mortgage business rule was violated
+components:
+  schemas:
+    ComparisonRequest:
+      type: object
+      required: [principal, remainingAmortizationMonths, offers]
+      properties:
+        principal:
+          type: number
+          minimum: 1000
+          maximum: 10000000
+          example: 425000
+        remainingAmortizationMonths:
+          type: integer
+          minimum: 12
+          maximum: 480
+          example: 264
+        offers:
+          type: array
+          minItems: 1
+          maxItems: 3
+          items:
+            $ref: '#/components/schemas/MortgageOffer'
+    MortgageOffer:
+      type: object
+      required: [name, annualInterestRate, termMonths, paymentFrequency]
+      properties:
+        name:
+          type: string
+          maxLength: 60
+          example: Current lender
+        annualInterestRate:
+          type: number
+          minimum: 0
+          maximum: 25
+          example: 4.79
+        termMonths:
+          type: integer
+          minimum: 6
+          maximum: 120
+          example: 60
+        paymentFrequency:
+          type: string
+          enum: [MONTHLY, BIWEEKLY, ACCELERATED_BIWEEKLY, WEEKLY, ACCELERATED_WEEKLY]
+        lumpSumPayment:
+          type: number
+          minimum: 0
+          default: 0
+        additionalPaymentPerPeriod:
+          type: number
+          minimum: 0
+          default: 0
+    ComparisonResponse:
+      type: object
+      properties:
+        principal:
+          type: number
+        remainingAmortizationMonths:
+          type: integer
+        interestAssumption:
+          type: string
+        generatedAt:
+          type: string
+          format: date-time
+        results:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/components/schemas/MortgageOffer'
+              - type: object
+                properties:
+                  regularPayment: { type: number }
+                  paymentsDuringTerm: { type: integer }
+                  totalPaidDuringTerm: { type: number }
+                  interestPaidDuringTerm: { type: number }
+                  principalPaidDuringTerm: { type: number }
+                  balanceAtTermEnd: { type: number }

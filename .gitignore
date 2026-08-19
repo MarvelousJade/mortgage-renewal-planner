@@ -1,0 +1,16 @@
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Environment and local artifacts
+.env
+*.local
+coverage/
+*.log
+
+# Build outputs are also covered by component-level ignore files
+frontend/dist/
+frontend/node_modules/
+backend/target/

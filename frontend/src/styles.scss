@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #17342d;
+  background: #f4f7f2;
+  font-synthesis: none;
+  --ink: #17342d;
+  --muted: #62746e;
+  --forest: #0b5b47;
+  --forest-dark: #073f33;
+  --mint: #b8ecd9;
+  --lime: #d9f18c;
+  --cream: #fbfcf7;
+  --line: #dce5df;
+  --danger: #a53f3f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 5%, rgba(217, 241, 140, 0.3), transparent 24rem),
+    #f4f7f2;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(11, 91, 71, 0.25);
+  outline-offset: 2px;
+}
