@@ -1,0 +1,22 @@
+{
+  "reviewedAtUtc": "2026-10-25T22:51:27.956Z",
+  "reviewedSourceCommit": "1d036024f84543b5e26b43dc37de4155c308067b",
+  "baselineMeaning": "Review commit only; historical experiment revisions are unknown unless explicitly recorded in the linked source.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5431,
+      "sha256": "d422497dd292ee2626b694dc42b3856bc6a1e2740f8521a129a8e3f3be69aae2"
+    },
+    {
+      "path": "docs/product/validation-plan.md",
+      "bytes": 1206,
+      "sha256": "f50aa9db79fe0c9f11f9d2bd7e92a3821bbc73bec52300ce6e3df9161a05b13d"
+    },
+    {
+      "path": "docs/api/openapi.yaml",
+      "bytes": 3005,
+      "sha256": "b91aea7d2a880c18b9d2b018eaeb7f4916a74e0f0347b5dd9d9a776a7cda09f5"
+    }
+  ]
+}
