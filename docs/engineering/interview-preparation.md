@@ -33,7 +33,8 @@ Spring Boot API. It does not establish financial accuracy or customer savings.�
    none after. A later isolated fault added one useful late-error regression;
    the delivered 21-case suite passes. Those totals are coverage, not user impact.
 7. Run the independent browser harness against built assets and a private Java
-   process. Explain the remaining dependency audit, accessibility and finance gaps.
+   process. Explain the later dependency remediation and remaining accessibility,
+   finance and broader security-validation gaps.
 
 ## Demonstration and backup
 
@@ -73,7 +74,8 @@ subscription cannot invoke that error handler on the working implementation.
 state still becomes stale, isolating the bug to client ownership rather than math.
 The stateless API and its existing contract remain unchanged.
 
-**What remains risky?** Unresolved dependency advisories; duplicate-name tracking;
+**What remains risky?** Future dependency advisories and unscanned ecosystems
+(the recorded 22 npm entries are now patched); duplicate-name tracking;
 comparison across unequal terms; programmatic emitEvent:false; incomplete financial,
 accessibility and mobile validation. Scope is state freshness, not overall readiness.
 
@@ -133,7 +135,9 @@ accessibility and mobile validation. Scope is state freshness, not overall readi
 - CDP smoke loads production assets and uses actual Java API responses. Delay and
   503 are explicitly injected at a local proxy, not claimed as natural incidents.
 - One screenshot was inspected at desktop size. No human interaction study or
-  assistive-technology audit was performed. Security audit remains unfavorable.
+  assistive-technology audit was performed. The historical npm findings were later
+  resolved with a clean install and zero full/production audit findings; this does
+  not replace Maven/container scanning or broader security testing.
 
 ## Defending the measurements
 
@@ -163,6 +167,10 @@ It does not prove universal correctness, user savings, adoption, security or upt
 3. Follow the disposable-worktree reproduction; observe failures yourself before
    claiming you investigated them. Do not change main or a deployment.
 4. Run the five-minute demo; explain the fixed-rate/rounding boundaries in README.
-5. Review dependency-audit.json and propose a separately scoped remediation plan.
+5. Review the historical dependency-audit.json and the completed
+   [remediation investigation](dependency-remediation.md). Run the seven XSRF
+   tests in `frontend/src/app/http-xsrf.spec.ts`, explain the same-origin positive
+   control, and trace the Angular 20.3.34 origin comparison. Do not claim an actual
+   production token leak or personal investigation you did not perform.
 6. Record what you actually did and understood. Use “The project implements…” until
    personal contribution is established; don't imply personal execution from logs.

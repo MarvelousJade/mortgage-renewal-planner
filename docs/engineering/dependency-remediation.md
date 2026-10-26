@@ -66,6 +66,12 @@ to this repair instead of rewriting the old audit results.
 
 ## Implemented repair and package inventory
 
+Implementation commit: `fb449699238d6385c07f5bbcc160356715aaa215`.
+Planning/baseline commit: `7dbe38a`. The final documentation/evidence commit adds
+no dependency or application behavior change. Completed work is integrated into
+local main; neither commits nor intentionally outdated baseline fixtures are
+published or deployed by this increment.
+
 Framework/compiler packages are aligned at 20.3.34; CLI/build are 20.3.41. Raised
 manifest lower bounds, not just the lockfile, so fresh resolution cannot select the
 old vulnerable Angular versions. No root dependency major migration, peer bypass,
@@ -173,7 +179,20 @@ not an application workaround or disabled XSRF protection.
 Repeated the **same corrected 28-case suite** in a disposable baseline worktree:
 24 passed / 4 failed. Patched dependencies: 28 passed / 0 failed. Preserved the
 initial fixture runs separately. No application source patch, authentication change
-or financial calculation change was necessary.
+or financial calculation change was necessary. The disposable baseline worktree
+was removed after verification; only fixture and logs remain in the delivered tree.
+
+To reproduce the failure without changing main (requires registry access and
+CHROME_BIN configured):
+
+```bash
+git worktree add --detach ../dependency-baseline ce99227
+git show fb44969:frontend/src/app/http-xsrf.spec.ts > ../dependency-baseline/frontend/src/app/http-xsrf.spec.ts
+(cd ../dependency-baseline/frontend && npm ci && npm run test:ci) # 24 pass, 4 fail
+```
+
+This uses the actual old locked versions in an isolated worktree. Do not deploy
+that fixture or describe this advisory reproduction as a real attack.
 
 ## Verification and reproduction
 

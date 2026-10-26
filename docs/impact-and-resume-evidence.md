@@ -128,7 +128,7 @@ performance claim. Exact commands, limitations and historical reproductions:
 | Runtime verification | Production Angular build and four backend tests passed; all 11 listed CDP smoke checks passed with the real private local Java API. | Local smoke only; proxy delay/503 synthetic; first harness run failed due to wrong asset root and is retained. No Render verification. |
 | Workflow | Editing remains possible during requests; failure/retry preserves values. | Capability observed, not a measured reduction in task time or steps. |
 | Real-world impact | None measured. | No adoption, savings, revenue, production capacity or user-outcome evidence. |
-| Security | npm audit reports 22 advisories: 6 moderate, 13 high, 3 critical. | Unresolved; dependency remediation requires a separate compatibility-reviewed change. |
+| Security (historical comparison-freshness baseline) | npm audit reported 22 affected package entries: 6 moderate, 13 high, 3 critical. | Resolved by the separate dependency-remediation increment below; historical artifacts retained. |
 
 ### Candidate claims and contribution scope
 
@@ -153,6 +153,65 @@ The coding agent executed and authored this increment. The repository owner's
 personal implementation/debugging experience is **not established** by these logs.
 The interview guide includes tasks to inspect/run personally before making such
 claims. No customer-savings, productivity or performance-improvement bullet is ready.
+
+## Dependency remediation increment (2026-10-26)
+
+**Status: verified local engineering result; no measured business/user impact.**
+Baseline: `ce9922763410fb8d7b5801f4ad38ad39e795f659`.
+Planning/evidence commit: `7dbe38a`; implementation:
+`fb449699238d6385c07f5bbcc160356715aaa215`.
+[Investigation, references, package inventory and procedure](engineering/dependency-remediation.md).
+[Exact environment/source/artifact manifest](evidence/dependency-remediation/verification.json).
+
+Problem: the locked frontend dependency graph had 22 npm affected-package entries
+(6 moderate, 13 high, 3 critical); production-only scope had 4 (3 moderate, 1 high).
+Those include inherited meta-vulnerabilities, not 22 independent CVEs or verified
+application exploits. Three critical entries include @angular/build inheriting
+piscina's status; it is not a third independent critical advisory.
+
+Implemented: aligned Angular framework/compiler at 20.3.34, CLI/build at 20.3.41,
+raised manifest minimums, refreshed transitives without forced/legacy peers,
+added seven transport-only XSRF tests, and enabled full npm audit steps in GitHub
+Actions and Jenkins. No application calculation, API, backend dependency or
+Render configuration changed.
+
+| Measurement | Before | After | Conditions / limits |
+| --- | --- | --- | --- |
+| Full npm audit affected entries | 22, including 3 critical | 0 at all severities | Same registry/date, full locked graph; retained audit-before.json and audit-after.json. Known registry coverage only. |
+| Production-only npm audit entries | 4 | 0 | Same --omit=dev scope; not the same metric as the full audit, so do not add them together. |
+| Same corrected 28-case frontend suite | 24 pass / 4 fail | 28 pass / 0 fail | Malformed cross-origin XSRF cases fail with old Angular, pass with patch. Disposable baseline worktree, identical test source, synthetic cookie/mock transport. |
+| Compatibility | Baseline 21 tests/build pass | 28 frontend tests, 4 backend tests, production build and 11 local browser smoke checks pass; npm ci and npm ls succeed | No actual user study, performance benchmark, financial validation or hosted CI execution. |
+
+Reproduction commands and all unfavorable attempts are retained: the first two
+update strategies failed ERESOLVE, an attempted install/tree check remained invalid,
+and the first patched test run exposed a missing-origin test fixture. Corrected
+that fixture and reran the same 28 cases against baseline and patched dependencies.
+Do not omit these runs or combine counts across runs. One final run per condition,
+no timing/cache comparison or percentile claims. Manifest includes Windows CPU/RAM,
+Node 22.23.3/npm 12.2.0, JDK 21 and Chrome identity; lockfile hashes identify workload.
+
+### Candidate claims
+
+- **Verified project engineering claim:** “Remediated 22 known npm affected-package
+  entries, including three critical entries, through compatible Angular and
+  transitive dependency upgrades; verified zero full/production audit findings,
+  clean installation and local application compatibility.” Evidence: baseline and
+  post-update audit JSON, package-remediation.json, tests/build/browser logs,
+  implementation commit above. Qualify as a dated npm registry result, not universal
+  security or evidence of prevented breaches.
+- **Verified testing capability:** “Added XSRF origin-isolation regression coverage
+  reproducing four malformed-URL failures before the Angular patch and passing all
+  28 frontend cases afterward.” Evidence: identical corrected fixture suite,
+  xsrf-before-with-origin.txt, tests-after.txt. No real cookie was leaked and no
+  production incident occurred; the transport was mocked.
+- **Unverified:** customer protection, prevented incidents, operational savings,
+  production security, adoption or personal implementation experience.
+
+The coding agent authored/executed this increment. Owner contribution remains
+unconfirmed; use capability wording until personally confirmed. No actual resume
+was changed. No push or redeployment; public Render evidence applies to the old
+revision, not this dependency repair. No Maven/container vulnerability scan or
+penetration test; Angular 20 support ends 2026-11-28 on the reviewed schedule.
 
 ## Measurement policy for future changes
 

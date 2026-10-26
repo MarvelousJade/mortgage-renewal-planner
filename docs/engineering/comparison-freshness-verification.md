@@ -124,7 +124,10 @@ makes no claim that its sample outputs were independently financially validated.
 
 ## Known limitations and next release
 
-- Dependency audit is unresolved and high priority before broader distribution.
+- The historical 22-entry dependency audit above is resolved by the separate
+  [dependency remediation](dependency-remediation.md): current full/production npm
+  audits report zero known findings, with compatibility checks. Original evidence
+  remains unchanged; zero findings does not establish complete security.
 - Integrated into local main after the deployment agent finished. Not pushed or
   redeployed. The other agent's public smoke evidence applies to `dfcd22c`, not
   to the new comparison-freshness frontend.

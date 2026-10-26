@@ -121,6 +121,7 @@ cd backend
 
 cd ../frontend
 npm ci
+npm run audit:dependencies
 npm run build
 npm run test:ci
 ```
@@ -134,9 +135,12 @@ requirements, design tradeoffs and reproduced defects. [Interview preparation](d
 and [impact evidence](docs/impact-and-resume-evidence.md) distinguish verified behavior
 from unmeasured user outcomes.
 
-Known security limitation: the dependency audit recorded for this increment reports
-22 vulnerabilities, including 3 critical advisories. See the retained audit and
-verification record; passing tests do not mean the dependencies are secure.
+Dependency remediation (2026-10-26): the updated lockfile reports **zero known npm
+audit findings**, down from 22 affected package entries, including 3 critical.
+Both full and production-only audits passed, along with compatibility and browser
+checks. GitHub Actions and Jenkins now run `npm run audit:dependencies`. See the
+[package inventory, investigations and verification](docs/engineering/dependency-remediation.md).
+A clean audit is a dated registry result, not proof of complete application security.
 
 ## Calculation boundaries
 

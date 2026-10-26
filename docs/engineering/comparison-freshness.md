@@ -134,7 +134,9 @@ screen-reader behavior were not verified.
 `npm ci` reported 22 dependency vulnerabilities (6 moderate, 13 high, 3 critical);
 full npm audit JSON is retained. No automatic upgrade was applied: dependency
 remediation is a separate high-priority release requiring compatibility review.
-Successful builds/tests do not establish dependency security.
+Successful builds/tests do not establish dependency security. **Subsequent update:**
+these findings were resolved in the separately verified [dependency remediation](dependency-remediation.md).
+The original audit and observations above remain historical evidence.
 
 Fix revision: `85d66a9ab943238fcce4db029110537e37a22537`
 (`fix: invalidate comparisons and cancel obsolete requests`).

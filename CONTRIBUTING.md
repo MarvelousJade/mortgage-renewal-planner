@@ -6,7 +6,7 @@ Thank you for helping improve RenewalReady.
 
 ```bash
 cd backend && ./mvnw verify
-cd ../frontend && npm ci && npm run build && npm run test:ci
+cd ../frontend && npm ci && npm run audit:dependencies && npm run build && npm run test:ci
 ```
 
 Java 21, Node.js 22 and a Chrome/Chromium binary are required. Alternatively, run `docker compose up --build` from the repository root.
@@ -18,6 +18,16 @@ Java 21, Node.js 22 and a Chrome/Chromium binary are required. Alternatively, ru
 3. Add or update tests for calculation changes.
 4. Record significant architectural decisions under `docs/adr`.
 5. Open a focused pull request and include screenshots for interface changes.
+
+## Dependency changes
+
+Keep `frontend/package.json` and `frontend/package-lock.json` together. Run the full
+`npm run audit:dependencies` gate (including development dependencies), `npm ls --all`,
+tests and a production build after a clean `npm ci`. Record before/after advisories,
+patched versions and compatibility checks; do not use forced peer resolution or
+suppress findings merely to pass CI. Registry failures must remain visible.
+See [the remediation record](docs/engineering/dependency-remediation.md) for the
+current inventory, browser smoke commands and remaining validation limits.
 
 ## Financial calculation changes
 

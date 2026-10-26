@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — dependency remediation (2026-10-26)
+
+- Patch Angular framework/compiler packages to 20.3.34 and CLI/build to 20.3.41.
+- Refresh vulnerable transitive dependencies without forced peers or advisory exclusions.
+- Resolve all 22 recorded npm affected-package entries, including three critical;
+  full and production-only audits report zero known findings at verification time.
+- Add seven XSRF origin-isolation tests; four malformed cross-origin cases reproduce
+  the old dependency defect and pass with the patched dependency.
+- Add full-dependency audit gates to GitHub Actions and Jenkins.
+- Retain package/advisory inventory, failed update attempts, and compatibility evidence.
+
+Not pushed or redeployed. No backend or calculation changes. See the
+[dependency remediation record](docs/engineering/dependency-remediation.md).
+
 ## Unreleased — comparison freshness (2026-10-26)
 
 - Clear completed comparisons and obsolete errors when mortgage/offer inputs change.
@@ -13,5 +27,6 @@
 
 Integrated into local main after combined-release verification. Not pushed or
 redeployed; the public Render deployment remains the previously verified revision.
-No calculation or API contract changes. Dependency advisories remain unresolved;
-see the [verification record](docs/engineering/comparison-freshness-verification.md).
+No calculation or API contract changes. The dependency findings recorded at that
+stage were resolved in the dependency-remediation increment above; historical raw
+audit evidence is preserved in the [verification record](docs/engineering/comparison-freshness-verification.md).
