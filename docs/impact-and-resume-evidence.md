@@ -63,6 +63,67 @@ No latency benchmark, adoption, workflow saving, or business outcome was measure
 Claim status: **preliminary** deployment capability only; no quantitative resume claim.
 Public deployment outcome will be recorded separately after verification.
 
+## Comparison freshness increment (2026-10-26)
+
+**Status: verified local engineering behavior; unverified user/business impact.**
+No actual resume was changed. Purpose: prevent mortgage results and errors from
+representing inputs that have since changed. No financial algorithm, API contract,
+Render setting, persistence or account feature changed.
+
+### Planned measurement and provenance
+
+Requirements/measurement plan were committed before behavior changes in `9125249`.
+Baseline application revision: `dfcd22ce6fd4e9433c58a2ae6c89110ee5b535ed`.
+Implementation revision: `85d66a9ab943238fcce4db029110537e37a22537`.
+Additional regression revision: `69e891c` (full SHA in final manifest).
+Final application source is unchanged from the implementation revision; its hashes
+match the successful smoke record. The later commit adds a test only.
+This delivery remains on `worktree/clear-meadow-4d2a`, not main or Render.
+
+Exact environment, full revisions and hashes: [final manifest](evidence/comparison-freshness/final-manifest.json).
+Raw inputs are the synthetic HTTP fixture and eight-field edit table in
+`frontend/src/app/comparison-freshness.spec.ts`; generatedAt/amounts are fictional
+transport data, not a finance oracle. Before/after used identical 20-case suites
+on Windows, Node 22.23.3, locked Angular/RxJS dependencies and headless Chrome 156.
+One recorded run per condition; no cache/timing comparison. No latency or workload
+performance claim. Exact commands, limitations and historical reproductions:
+[verification record](engineering/comparison-freshness-verification.md).
+
+### Supported outcomes
+
+| Category | Evidence-supported result | Limits |
+| --- | --- | --- |
+| Engineering correctness | Same expanded suite: 16 failing/4 passing before, 0 failing/20 passing after. Eight editable field categories invalidate completed results; edit/add/remove/repeated submit/destroy paths cancel pending observation. | Deterministic synthetic cases only; counts describe verification scope, not general defect detection or real-user reliability. No percentage impact claim. |
+| Engineering hardening | One intentionally introduced missing-supersession fault yielded 2 failing/19 passing tests; restoring working code yielded 21 passing. Integrated one additional obsolete-error regression, no new implementation fix. | Local isolated branch; not a production incident. See explicit provenance in investigation. |
+| Runtime verification | Production Angular build and four backend tests passed; all 11 listed CDP smoke checks passed with the real private local Java API. | Local smoke only; proxy delay/503 synthetic; first harness run failed due to wrong asset root and is retained. No Render verification. |
+| Workflow | Editing remains possible during requests; failure/retry preserves values. | Capability observed, not a measured reduction in task time or steps. |
+| Real-world impact | None measured. | No adoption, savings, revenue, production capacity or user-outcome evidence. |
+| Security | npm audit reports 22 advisories: 6 moderate, 13 high, 3 critical. | Unresolved; dependency remediation requires a separate compatibility-reviewed change. |
+
+### Candidate claims and contribution scope
+
+1. **Verified project capability:** “Hardened an Angular mortgage comparison workflow
+   with input-driven invalidation, HTTP supersession and lifecycle cleanup; verified
+   edit, retry and delayed-response behavior with browser-hosted regression tests
+   and a local Spring Boot smoke test.” Support: `85d66a9`, `69e891c`, regression
+   logs, browser smoke JSON. No measured user impact. First-person/action wording
+   is suitable only after the owner confirms implementation contribution; otherwise
+   say “The project implements…”.
+2. **Verified testing capability:** “Added deterministic HTTP regression coverage
+   for stale mortgage comparisons, including late successes, obsolete service
+   errors and component teardown.” Support: the spec and controlled investigation
+   logs. This does not establish who personally authored or ran the tests.
+3. **Preliminary quantitative engineering draft:** “Resolved 16 failing cases in a
+   fixed 20-case local browser regression suite by invalidating stale inputs and
+   canceling obsolete HTTP subscriptions.” Same-case raw logs support the numbers;
+   this is correctness/verification scope, not business impact. Prefer the first
+   two capability claims unless the narrowly synthetic qualification fits.
+
+The coding agent executed and authored this increment. The repository owner's
+personal implementation/debugging experience is **not established** by these logs.
+The interview guide includes tasks to inspect/run personally before making such
+claims. No customer-savings, productivity or performance-improvement bullet is ready.
+
 ## Measurement policy for future changes
 
 Choose one or two useful metrics during planning and record acceptance criteria before implementation. Measure the old version first; for new functionality use an initial implementation or a defined manual workflow. Compare equivalent inputs, environments and required outputs. Without a defensible comparator, report an absolute result. Test totals, lines of code and commits are verification/scope evidence, not user impact.

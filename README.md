@@ -15,6 +15,7 @@ This is an independent educational project. It is not affiliated with RBC or any
 - Models a lump sum applied at renewal and optional additional payments
 - Uses the Canadian fixed-rate convention: nominal annual interest compounded semi-annually, not in advance
 - Validates input in both Angular and Spring Boot
+- Clears outdated comparisons on edits and cancels obsolete client requests without losing entered values
 - Collects no identity, property address, account number or credit information
 
 ## Technology
@@ -125,6 +126,17 @@ npm run test:ci
 ```
 
 GitHub Actions executes these checks for pushes and pull requests. The root [`Jenkinsfile`](Jenkinsfile) demonstrates an equivalent multistage Jenkins pipeline.
+
+For a production-build browser smoke test against a private local Java API, plus
+failure/retry demonstrations, see the [verification and feature walkthrough](docs/engineering/comparison-freshness-verification.md).
+The [engineering record](docs/engineering/comparison-freshness.md) documents references,
+requirements, design tradeoffs and reproduced defects. [Interview preparation](docs/engineering/interview-preparation.md)
+and [impact evidence](docs/impact-and-resume-evidence.md) distinguish verified behavior
+from unmeasured user outcomes.
+
+Known security limitation: the dependency audit recorded for this increment reports
+22 vulnerabilities, including 3 critical advisories. See the retained audit and
+verification record; passing tests do not mean the dependencies are secure.
 
 ## Calculation boundaries
 

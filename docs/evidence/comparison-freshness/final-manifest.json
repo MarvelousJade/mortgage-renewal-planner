@@ -1,0 +1,107 @@
+{
+  "recordedAt": "2026-10-26T12:23:12.441Z",
+  "measuredRevision": "69e891cd3580feb523d0ee05c2d22dcdbcaa9cc1",
+  "baselineRevision": "dfcd22ce6fd4e9433c58a2ae6c89110ee5b535ed",
+  "repairRevision": "85d66a9ab943238fcce4db029110537e37a22537",
+  "isolatedFaultRevision": "e7f279a111a59f2f5e7641be48db695c13b02153",
+  "isolatedRepairRevision": "3c690afc88a5e12d3cb931834205e6c0f4fc5b83",
+  "workingTree": "M README.md\n M docs/impact-and-resume-evidence.md\n?? CHANGELOG.md\n?? docs/engineering/comparison-freshness-verification.md\n?? docs/engineering/interview-preparation.md\n?? docs/evidence/comparison-freshness/final-backend.txt\n?? docs/evidence/comparison-freshness/final-build.txt\n?? docs/evidence/comparison-freshness/final-tests.txt\n?? docs/evidence/comparison-freshness/record-results.mjs",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "ramBytes": 17101787136,
+    "node": "v22.23.3",
+    "npm": "12.2.0",
+    "versions": {
+      "@angular/core": "20.3.28",
+      "@angular/cli": "20.3.34",
+      "rxjs": "7.8.2",
+      "typescript": "5.9.3",
+      "karma": "6.4.4"
+    },
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)\r\n"
+  },
+  "results": {
+    "originalSuite": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "sameExpandedSuiteBefore": {
+      "passed": 4,
+      "failed": 16,
+      "skipped": 0
+    },
+    "sameExpandedSuiteAfter": {
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0
+    },
+    "isolatedFaultWithExtraRegression": {
+      "passed": 19,
+      "failed": 2,
+      "skipped": 0
+    },
+    "isolatedRepairedWithExtraRegression": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "deliveredSuite": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "passed": 4,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "dependencyAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 6,
+      "high": 13,
+      "critical": 3,
+      "total": 22
+    }
+  },
+  "conditions": "Local synthetic correctness cases, one run per recorded condition; not timing, financial validation, adoption or business impact. Counts are transcribed from retained raw logs. See engineering document for exact procedures and scope.",
+  "sources": {
+    "frontend/src/app/app.ts": "6ba31c84a18440d3adf8d441b8e5906c0009ff22608d2556a6c92f1f34227f64",
+    "frontend/src/app/app.html": "af0f593cbbb512cfcc21b767fc358a3c6e2b6e489a6e1134e92b64a01f78ccdf",
+    "frontend/src/app/comparison-freshness.spec.ts": "fb14e820ab2ba32b937d5dca95005ee1c98963d244d5154f45c0fec6df3fa726",
+    "frontend/package-lock.json": "1158290501227d19f74932a4eb26ab59276b2a0d31c94f7be00fddfef7f0e7ed",
+    "backend/pom.xml": "c20881b6a507afaae1f2d7e243604eff2f8fc7bd8ca7530888704993ac433bec"
+  },
+  "artifacts": {
+    "backend-verify.txt": "d1f7205ae160f94ac27c8980fa77c1ca3c43bccfe652d9eb9198aefc7e9c6dac",
+    "baseline-build.txt": "010f8c8daa3c75c3dd4c9594f0c9b74d86e1250fdf68ade684bb7af78a4aa14e",
+    "baseline-tests.txt": "7a594d14720c188ff58755ef8ecafeaae204b4dca8ff021481eca112a2d0c480",
+    "browser-backend-first.txt": "71569b71189c25b98c8818b18504eccefe42ad6a0f7d238406c4a341c63b63ec",
+    "browser-backend.txt": "6437a0f05cc852319d4a0e4383123dd57e18d3ce7fbc4d156ae78f5ce68bd617",
+    "browser-results.png": "7685645b82eb79ccf2d824dd2354fab4906ea77c6b1000c371499283262bf9b0",
+    "browser-run-first-failure.txt": "f43e431fe218f4f40a61ca740788bd44926f9dfe310a6884bedfdde4dd394d24",
+    "browser-run.txt": "079cba928ceac2cea247c1aafeab1b0139424b4d345d4a9379a0aea4e60fd156",
+    "browser-smoke-first-failure.json": "f43e431fe218f4f40a61ca740788bd44926f9dfe310a6884bedfdde4dd394d24",
+    "browser-smoke.json": "079cba928ceac2cea247c1aafeab1b0139424b4d345d4a9379a0aea4e60fd156",
+    "browser-smoke.mjs": "472c9224370c0d1900c2874af6d58e682b8e9474775f97b206d03aa457053f0b",
+    "dependency-audit.json": "5e0f9371dd76e0ecfdeaa88c5fe31b9920114ad05ab725e5c19914e23e5e2a23",
+    "environment.json": "3a0da2ac4660e0ee149ecd20f839918d50e10aafc35f45e2290fa315fdad5dc6",
+    "final-backend.txt": "7d6c5cbe2a6906f1fd2d529995b9718a53c884439de2a6be305f453a408010f5",
+    "final-build.txt": "21aa7084faa8f51436c99deaf7c96ac89248645cfd46b752a41fbabd8f74bbbf",
+    "final-tests.txt": "0615de13a74e2c2e34a9fa43087523be68aca817a40fa9c6aa2098d9e4d3963e",
+    "install.txt": "7408f32fc2633e73566a40c08648a920dd953a6fdf14f53f09a4eb9da5acd5b6",
+    "intentional-fault-failing.txt": "c169ee149c6511c888b9fd9c5b423bbe736c9b42ffafc4c3ac67d4780d28a50b",
+    "intentional-fault-repaired.txt": "ffad181a5a994886ad3c47c69554d1d29b85ddd410d1531e8cff930c965a293a",
+    "intentional-fault.patch": "73edab4773807d82eac5e193ea87829e2b76db825921bfda0425cf4ce1b7bf29",
+    "investigation-install.txt": "384e724f2c57f21d96391123381193163aef4060700a8e3fe36b6b9b0e96fe9b",
+    "record-results.mjs": "99dda56ba3ba1a3d5ff39dfb89a83cd2cb590b27845289d7c7834d79efbfd885",
+    "regression-after.txt": "64d7593d2d2a8ef62c31ef6fcd607eb77b4ccbab021bcee600fa70c5a9f76094",
+    "regression-before.txt": "81e45e2c1c9c0cc100b2f425183f523dac4370bcb68a7d5e8dd7e0b4b6c45c2e",
+    "release-build.txt": "1c6c9d55bb8970a57dfa926477ac6d9e6961cd3dcd0622f1f101aedbd29ee982"
+  }
+}

@@ -135,7 +135,8 @@ full npm audit JSON is retained. No automatic upgrade was applied: dependency
 remediation is a separate high-priority release requiring compatibility review.
 Successful builds/tests do not establish dependency security.
 
-Fix revision: resolve the commit titled `fix: invalidate comparisons and cancel obsolete requests`.
+Fix revision: `85d66a9ab943238fcce4db029110537e37a22537`
+(`fix: invalidate comparisons and cancel obsolete requests`).
 ### BUG-CONTROL-01: obsolete service errors overwrite current status
 
 This fault was **intentionally introduced locally**, not discovered in production.
@@ -174,3 +175,15 @@ intentional repeated-submission fault was exercised in browser-hosted Angular
 HTTP tests, not injected into a deployed service. Remaining limitation: the UI's
 disabled submit button normally prevents repeated mouse submission; the method
 still needs deterministic supersession for programmatic/reentrant callers.
+
+### Release completion
+
+Integrated the useful extra regression as `69e891c`. Final verification at that
+revision: 21 frontend tests passed, four backend tests passed, production build
+passed. The implementation source hashes match the successful CDP smoke; no
+behavior changes followed that run. See [verification/demo](comparison-freshness-verification.md),
+[interview preparation](interview-preparation.md) and the final evidence manifest.
+A documentation-only commit completes the delivery. Main advanced independently
+while this work was running; it was not checked out, modified or merged here.
+The clean investigation worktree was disposable; local commits/branch and patch
+retain provenance. No broken branch was published.
