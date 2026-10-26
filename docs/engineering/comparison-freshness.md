@@ -89,5 +89,51 @@ component-scoped Angular render callback, guarded by current comparison state.
   suspected cause is independent subscriptions updating shared signals. HTTP
   regression tests will distinguish invalidation from merely clearing the display.
 
-Further observations, measured outcomes and controlled-fault provenance will be
-recorded as executed, not inferred as runtime evidence.
+### Repair observations
+
+Added `frontend/src/app/comparison-freshness.spec.ts` before changing behavior.
+Against the baseline implementation, the expanded suite produced **16 failures,
+4 passes, 0 skipped**. After repair it produced **20 passes, 0 failures, 0 skipped**.
+This is one deterministic before/after run of the same synthetic assertions, not
+a statistical defect-detection rate. The existing three tests remained unchanged.
+
+BUG-FRESH-01 confirmed: HTTP flush plus rendered input event leaves the old
+`#results` present before repair. All eight editable field categories reproduce
+this. No backend calculation is involved, rejecting a financial-math cause.
+Fix: one form.valueChanges observer owns invalidation, also covering array changes.
+
+BUG-FRESH-02 confirmed: HttpTestingController reports request.cancelled=false
+before repair on edit, add, remove, repeat submission and component destruction.
+Late flush restores obsolete results. Clearing the display alone is insufficient;
+tests explicitly distinguish it from cancellation. Fix: takeUntil on supersession,
+takeUntilDestroyed for lifecycle, finalize for loading release. Cancel before setting
+new loading=true so an old finalizer cannot release the new request's loading state.
+Component-scoped afterNextRender replaces unowned setTimeout scrolling, and pending
+scroll work is destroyed on edits. No API or calculation changes were necessary.
+Remaining risk: client cancellation does not promise server computation cancellation.
+Future programmatic edits must emit reactive form events (default behavior).
+
+Backend verification passed on the locally discovered JDK 21.0.12.1+1, despite
+Java not initially being on PATH: four tests, no failures/errors/skips. Frontend
+production build passed. Browser smoke launches an isolated Java process, serves
+production Angular assets, and drives installed headless Chrome via CDP without
+new dependencies. Its first attempt failed at Angular bootstrap because the harness
+used the package name instead of Angular's configured output directory; preserved
+`browser-*-first*` artifacts show this unfavorable result. Corrected the harness to
+`frontend/dist/frontend/browser`; the subsequent run passed all listed checks.
+
+Browser checks cover launch, navigation, two/three offers, ordinary input events,
+a locally delayed real API response, re-comparison, add/remove, a local injected
+503 and successful retry, invalid input without a request, and no uncaught runtime
+exceptions. This is programmatic interaction, not human usability testing. The
+recorded 1440x1000 screenshot was visually inspected: two result cards and interest
+bars are rendered without obvious clipping at that viewport. Mobile layout and
+screen-reader behavior were not verified.
+
+`npm ci` reported 22 dependency vulnerabilities (6 moderate, 13 high, 3 critical);
+full npm audit JSON is retained. No automatic upgrade was applied: dependency
+remediation is a separate high-priority release requiring compatibility review.
+Successful builds/tests do not establish dependency security.
+
+Fix revision: resolve the commit titled `fix: invalidate comparisons and cancel obsolete requests`.
+Controlled-fault provenance and final verification follow below as executed.

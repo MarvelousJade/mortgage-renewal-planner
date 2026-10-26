@@ -1,0 +1,22 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-10-26T08:13:09.968-04:00  INFO 14660 --- [RenewalReady API] [           main] c.r.api.RenewalReadyApiApplication       : Starting RenewalReadyApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 14660 (C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a\backend\target\backend-0.0.1-SNAPSHOT.jar started by FanSh in C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a)
+2026-10-26T08:13:09.970-04:00  INFO 14660 --- [RenewalReady API] [           main] c.r.api.RenewalReadyApiApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-10-26T08:13:11.191-04:00  INFO 14660 --- [RenewalReady API] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 53504 (http)
+2026-10-26T08:13:11.204-04:00  INFO 14660 --- [RenewalReady API] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-26T08:13:11.204-04:00  INFO 14660 --- [RenewalReady API] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-10-26T08:13:11.237-04:00  INFO 14660 --- [RenewalReady API] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1209 ms
+2026-10-26T08:13:11.829-04:00  INFO 14660 --- [RenewalReady API] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-10-26T08:13:11.927-04:00  INFO 14660 --- [RenewalReady API] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 53504 (http) with context path '/'
+2026-10-26T08:13:11.935-04:00  INFO 14660 --- [RenewalReady API] [           main] c.r.api.RenewalReadyApiApplication       : Started RenewalReadyApiApplication in 2.433 seconds (process running for 2.934)
+2026-10-26T08:13:12.022-04:00  INFO 14660 --- [RenewalReady API] [io-53504-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-26T08:13:12.022-04:00  INFO 14660 --- [RenewalReady API] [io-53504-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-26T08:13:12.023-04:00  INFO 14660 --- [RenewalReady API] [io-53504-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

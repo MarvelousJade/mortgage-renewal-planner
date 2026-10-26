@@ -1,8 +1,11 @@
 import { CurrencyPipe, DecimalPipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, inject, signal } from '@angular/core';
+import {
+  afterNextRender, AfterRenderRef, Component, DestroyRef, inject, Injector, signal,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { finalize } from 'rxjs';
+import { finalize, Subject, takeUntil } from 'rxjs';
 import { MortgageApiService } from './mortgage-api.service';
 import {
   MortgageComparisonRequest,
@@ -20,9 +23,14 @@ import {
 export class App {
   private readonly fb = inject(FormBuilder);
   private readonly mortgageApi = inject(MortgageApiService);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly injector = inject(Injector);
+  private readonly cancelComparison = new Subject<void>();
+  private pendingScroll?: AfterRenderRef;
 
   readonly loading = signal(false);
   readonly errorMessage = signal('');
+  readonly inputsChanged = signal(false);
   readonly comparison = signal<MortgageComparisonResponse | null>(null);
   readonly currentYear = new Date().getFullYear();
 
@@ -46,6 +54,15 @@ export class App {
     ]),
   });
 
+  constructor() {
+    this.form.valueChanges.pipe(takeUntilDestroyed()).subscribe(() => {
+      const hadComparison = this.comparison() !== null || this.loading();
+      this.clearResults();
+      if (hadComparison) this.inputsChanged.set(true);
+    });
+    this.destroyRef.onDestroy(() => this.pendingScroll?.destroy());
+  }
+
   get offers() {
     return this.form.controls.offers;
   }
@@ -53,19 +70,18 @@ export class App {
   addOffer(): void {
     if (this.offers.length < 3) {
       this.offers.push(this.createOffer(`Offer ${this.offers.length + 1}`, 4.59));
-      this.clearResults();
     }
   }
 
   removeOffer(index: number): void {
     if (this.offers.length > 1) {
       this.offers.removeAt(index);
-      this.clearResults();
     }
   }
 
   compareOffers(): void {
-    this.errorMessage.set('');
+    // Cancel first: the old request's finalize must run before new loading starts.
+    this.clearResults();
 
     if (this.form.invalid) {
       this.form.markAllAsTouched();
@@ -87,16 +103,23 @@ export class App {
       })),
     };
 
+    this.inputsChanged.set(false);
     this.loading.set(true);
-    this.comparison.set(null);
 
     this.mortgageApi
       .compare(request)
-      .pipe(finalize(() => this.loading.set(false)))
+      .pipe(
+        takeUntil(this.cancelComparison),
+        takeUntilDestroyed(this.destroyRef),
+        finalize(() => this.loading.set(false)),
+      )
       .subscribe({
         next: (response) => {
           this.comparison.set(response);
-          setTimeout(() => document.querySelector('#results')?.scrollIntoView({ behavior: 'smooth' }));
+          this.pendingScroll = afterNextRender(
+            () => document.querySelector('#results')?.scrollIntoView({ behavior: 'smooth' }),
+            { injector: this.injector },
+          );
         },
         error: (error: HttpErrorResponse) => {
           const message = error.error?.message;
@@ -137,6 +160,9 @@ export class App {
   }
 
   private clearResults(): void {
+    this.cancelComparison.next();
+    this.pendingScroll?.destroy();
+    this.pendingScroll = undefined;
     this.comparison.set(null);
     this.errorMessage.set('');
   }

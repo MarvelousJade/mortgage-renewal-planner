@@ -238,6 +238,12 @@
         <div class="alert" role="alert"><span>!</span>{{ errorMessage() }}</div>
       }
 
+      <p role="status" aria-live="polite">
+        @if (inputsChanged()) {
+          Inputs changed. Compare again to see results for your current offers.
+        }
+      </p>
+
       <div class="submit-row">
         <button class="submit-button" type="submit" [disabled]="loading()">
           @if (loading()) {
