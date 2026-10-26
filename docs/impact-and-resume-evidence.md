@@ -209,9 +209,44 @@ Node 22.23.3/npm 12.2.0, JDK 21 and Chrome identity; lockfile hashes identify wo
 
 The coding agent authored/executed this increment. Owner contribution remains
 unconfirmed; use capability wording until personally confirmed. No actual resume
-was changed. No push or redeployment; public Render evidence applies to the old
-revision, not this dependency repair. No Maven/container vulnerability scan or
+was changed. Initial verification was local only. Subsequent publication and
+hosted checks are recorded below. No Maven/container vulnerability scan or
 penetration test; Angular 20 support ends 2026-11-28 on the reviewed schedule.
+
+## Authorized publication and live verification (2026-10-26)
+
+User authorized publishing main and Render deployment. Release source:
+`e4711bbf2d8bf117c6a9f5b4d292923aac561ab4`; GitHub repository public, default
+branch main: https://github.com/MarvelousJade/mortgage-renewal-planner.
+Live URL: https://renewalready.onrender.com. Render deploy
+`dep-dbfnf43bc2fs7397geg0` reached live on this source at
+`2026-10-26T15:55:55.74797Z`. Runtime plan remains free; no plan change or
+uptime/account-cost guarantee. A subsequent evidence-only commit uses the documented
+`[skip render]` marker, so deployed source deliberately excludes that documentation.
+
+[Publication procedure and limits](engineering/release-publication.md).
+[Raw status, CI and HTTP/browser evidence](evidence/release-publication/verification.json).
+GitHub Actions run [40353826275](https://github.com/MarvelousJade/mortgage-renewal-planner/actions/runs/40353826275)
+passed both jobs on Ubuntu: 28 frontend tests, four backend tests, full audit zero,
+production build passed. Render's Linux Docker build also reported zero npm findings
+and Maven BUILD SUCCESS. This closes the earlier local-only CI/container-build gaps;
+it is not a Maven/container vulnerability scan.
+
+The public smoke performed one synthetic API comparison, invalid-input checks,
+asset/health checks and programmatic desktop Chrome interaction. All 12 grouped
+checks passed, including Angular 20.3.34, edit invalidation, add/remove comparisons,
+and a browser-local offline failure followed by a real online retry. No shared
+service fault injection, load test, actual token leak or user-data operation.
+Financial baseline equality is one saved fixture, not independent financial accuracy.
+No latency, adoption, workflow-time, business impact or personal-contribution claim.
+Earlier “not published” statements retain their historical local-stage meaning and
+are superseded for current availability by this record.
+
+Claim status: **verified** published/deployed capability and enumerated live
+workflows on the stated revision/date. Dependency-remediation claims above now
+also have hosted-CI/Linux-build evidence, but not universal-security proof.
+The coding agent executed these checks; repository-owner personal contribution
+remains unconfirmed. No actual resume was edited.
 
 ## Measurement policy for future changes
 

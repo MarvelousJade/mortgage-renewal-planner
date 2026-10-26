@@ -1,0 +1,506 @@
+Spring Boot tests	Set up job	﻿2026-10-26T15:53:57.9179554Z Current runner version: '2.338.0'
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9207113Z ##[group]Runner Image Provisioner
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9208078Z Hosted Compute Agent
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9208688Z Version: 20261021.618
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9209448Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9210265Z Build Date: 2026-10-21T00:45:21Z
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9211002Z Worker ID: {7f3a26f1-8c60-4666-9874-29788bf003fb}
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9211772Z Region: westcentralus
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9212592Z Cloud: Azure
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9213280Z ##[endgroup]
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9214667Z ##[group]Operating System
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9215365Z Ubuntu
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9215977Z 24.04.5
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9216536Z LTS
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9217143Z ##[endgroup]
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9217769Z ##[group]Runner Image
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9218382Z Image: ubuntu-24.04
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9219054Z Version: 20261012.334.1
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9220167Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9222272Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9223270Z ##[endgroup]
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9224529Z ##[group]GITHUB_TOKEN Permissions
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9226393Z Contents: read
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9227236Z Metadata: read
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9227835Z ##[endgroup]
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9230031Z Secret source: Actions
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9231000Z Cache mode: write
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9231761Z Prepare workflow directory
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9647982Z Prepare all required actions
+Spring Boot tests	Set up job	2026-10-26T15:53:57.9695300Z Getting action download info
+Spring Boot tests	Set up job	2026-10-26T15:53:58.3350100Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Spring Boot tests	Set up job	2026-10-26T15:53:58.6152364Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+Spring Boot tests	Set up job	2026-10-26T15:53:59.7754282Z Complete job name: Spring Boot tests
+Spring Boot tests	Run actions/checkout@v4	﻿2026-10-26T15:53:59.8807548Z ##[group]Run actions/checkout@v4
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8809557Z with:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8810686Z   repository: MarvelousJade/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8819755Z   token: ***
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8820724Z   ssh-strict: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8821665Z   ssh-user: git
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8822745Z   persist-credentials: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8823779Z   clean: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8824721Z   sparse-checkout-cone-mode: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8825825Z   fetch-depth: 1
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8826747Z   fetch-tags: false
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8827702Z   show-progress: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8828639Z   lfs: false
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8829516Z   submodules: false
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8830497Z   set-safe-directory: true
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8831572Z   allow-unsafe-pr-checkout: false
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:53:59.8833245Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0100005Z Syncing repository: MarvelousJade/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0105019Z ##[group]Getting Git version info
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0107957Z Working directory is '/home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner'
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0112132Z [command]/usr/bin/git version
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0194029Z git version 2.55.0
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0218840Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0229503Z Temporarily overriding HOME='/home/runner/work/_temp/1032555d-f8c9-4154-af9f-33f8935f07a0' before making global git config changes
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0234510Z Adding repository directory to the temporary git global config as a safe directory
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0244898Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0317063Z Deleting the contents of '/home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner'
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0322064Z ##[group]Initializing the repository
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0329827Z [command]/usr/bin/git init /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0443463Z hint: Using 'master' as the name for the initial branch. This default branch name
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0447328Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0450248Z hint: to use in all of your new repositories, which will suppress this warning,
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0452147Z hint: call:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0453336Z hint:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0454869Z hint: 	git config --global init.defaultBranch <name>
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0456713Z hint:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0458443Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0460420Z hint: 'development'. The just-created branch can be renamed via this command:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0462422Z hint:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0463749Z hint: 	git branch -m <name>
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0465042Z hint:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0466407Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0469058Z Initialized empty Git repository in /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/.git/
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0474833Z [command]/usr/bin/git remote add origin https://github.com/MarvelousJade/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0526686Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0528641Z ##[group]Disabling automatic garbage collection
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0530938Z [command]/usr/bin/git config --local gc.auto 0
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0627384Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0630340Z ##[group]Setting up auth
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0633329Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.0657223Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1017375Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1058364Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1306042Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1348658Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1605763Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1680436Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1683448Z ##[group]Fetching the repository
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.1690824Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e4711bbf2d8bf117c6a9f5b4d292923aac561ab4:refs/remotes/origin/main
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9776392Z From https://github.com/MarvelousJade/mortgage-renewal-planner
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9778838Z  * [new ref]         e4711bbf2d8bf117c6a9f5b4d292923aac561ab4 -> origin/main
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9782524Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9783558Z ##[group]Determining the checkout info
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9786691Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9794281Z [command]/usr/bin/git sparse-checkout disable
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9853069Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9889904Z ##[group]Checking out the ref
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:00.9895242Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:01.0189435Z Switched to a new branch 'main'
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:01.0192197Z branch 'main' set up to track 'origin/main'.
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:01.0200503Z ##[endgroup]
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:01.0251064Z [command]/usr/bin/git log -1 --format=%H
+Spring Boot tests	Run actions/checkout@v4	2026-10-26T15:54:01.0289010Z e4711bbf2d8bf117c6a9f5b4d292923aac561ab4
+Spring Boot tests	Run actions/setup-java@v4	﻿2026-10-26T15:54:01.0615776Z ##[group]Run actions/setup-java@v4
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0616372Z with:
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0616764Z   distribution: temurin
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0617241Z   java-version: 21
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0617888Z   cache: maven
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0618379Z   java-package: jdk
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0618835Z   check-latest: false
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0619230Z   server-id: github
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0619685Z   server-username: GITHUB_ACTOR
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0620141Z   server-password: GITHUB_TOKEN
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0620565Z   overwrite-settings: true
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0621089Z   job-status: success
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0623829Z   token: ***
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.0624276Z ##[endgroup]
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2463157Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2472214Z ##[group]Installed distributions
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2499801Z Resolved Java 21.0.12+1 from tool-cache
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2500497Z Setting Java 21.0.12+1 as the default
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2510858Z (node:2325) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2512399Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2515469Z Creating toolchains.xml for JDK version 21 from temurin
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2587845Z Writing to /home/runner/.m2/toolchains.xml
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2588543Z 
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2588748Z Java configuration:
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2589195Z   Distribution: temurin
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2589642Z   Version: 21.0.12+1
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2590270Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2590763Z 
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2591503Z ##[endgroup]
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2614136Z Creating settings.xml with server-id: github
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.2638548Z Writing to /home/runner/.m2/settings.xml
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.4984654Z Cache hit for: setup-java-Linux-x64-maven-3cd75281cf3ac2f84baeb2b8b70c7aaf9c0427643b4ae81b8a7a9db6f9ac851e
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:01.5093287Z (node:2325) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:02.7176606Z Received 37748736 of 57226400 (66.0%), 36.0 MBs/sec
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:02.9815014Z Received 57226400 of 57226400 (100.0%), 43.1 MBs/sec
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:02.9815761Z Cache Size: ~55 MB (57226400 B)
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:02.9944470Z [command]/usr/bin/tar -xf /home/runner/work/_temp/adea7f18-9820-4503-b782-60524b0cf24d/cache.tzst -P -C /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner --use-compress-program unzstd
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:03.1330190Z Cache restored successfully
+Spring Boot tests	Run actions/setup-java@v4	2026-10-26T15:54:03.1366737Z Cache restored from key: setup-java-Linux-x64-maven-3cd75281cf3ac2f84baeb2b8b70c7aaf9c0427643b4ae81b8a7a9db6f9ac851e
+Spring Boot tests	Verify API	﻿2026-10-26T15:54:03.1566146Z ##[group]Run ./mvnw --batch-mode --no-transfer-progress verify
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1566735Z ^[[36;1m./mvnw --batch-mode --no-transfer-progress verify^[[0m
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1793039Z shell: /usr/bin/bash -e {0}
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1793412Z env:
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1793757Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1794277Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-1/x64
+Spring Boot tests	Verify API	2026-10-26T15:54:03.1794665Z ##[endgroup]
+Spring Boot tests	Verify API	2026-10-26T15:54:08.3239315Z [INFO] Scanning for projects...
+Spring Boot tests	Verify API	2026-10-26T15:54:08.5993277Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:08.6018489Z [INFO] ----------------------< ca.renewalready:backend >-----------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:08.6043511Z [INFO] Building RenewalReady API 0.0.1-SNAPSHOT
+Spring Boot tests	Verify API	2026-10-26T15:54:08.6073337Z [INFO]   from pom.xml
+Spring Boot tests	Verify API	2026-10-26T15:54:08.6082717Z [INFO] --------------------------------[ jar ]---------------------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:08.9683228Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:08.9687628Z [INFO] --- resources:3.5.0:resources (default-resources) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:09.1305633Z [INFO] Copying 1 resource from src/main/resources to target/classes
+Spring Boot tests	Verify API	2026-10-26T15:54:09.1404787Z [INFO] Copying 0 resource from src/main/resources to target/classes
+Spring Boot tests	Verify API	2026-10-26T15:54:09.1412771Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:09.1413652Z [INFO] --- compiler:3.15.0:compile (default-compile) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:09.3869097Z [INFO] Recompiling the module because of changed source code.
+Spring Boot tests	Verify API	2026-10-26T15:54:09.3943406Z [INFO] Compiling 10 source files with javac [debug parameters release 21] to target/classes
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3545236Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3563299Z [INFO] --- resources:3.5.0:testResources (default-testResources) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3613200Z [INFO] Copying 1 resource from src/test/resources to target/test-classes
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3642735Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3672735Z [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3687034Z [INFO] Recompiling the module because of changed dependency.
+Spring Boot tests	Verify API	2026-10-26T15:54:11.3723150Z [INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+Spring Boot tests	Verify API	2026-10-26T15:54:11.7823174Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:11.7832742Z [INFO] --- surefire:3.5.6:test (default-test) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:12.0753588Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Spring Boot tests	Verify API	2026-10-26T15:54:12.1284785Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:12.1285545Z [INFO] -------------------------------------------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:12.1286288Z [INFO]  T E S T S
+Spring Boot tests	Verify API	2026-10-26T15:54:12.1286739Z [INFO] -------------------------------------------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:13.2743548Z [INFO] Running ca.renewalready.api.RenewalReadyApiApplicationTests
+Spring Boot tests	Verify API	2026-10-26T15:54:13.4775118Z 15:54:13.447 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ca.renewalready.api.RenewalReadyApiApplicationTests]: RenewalReadyApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Spring Boot tests	Verify API	2026-10-26T15:54:13.5683274Z 15:54:13.547 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ca.renewalready.api.RenewalReadyApiApplication for test class ca.renewalready.api.RenewalReadyApiApplicationTests
+Spring Boot tests	Verify API	2026-10-26T15:54:13.7697101Z 15:54:13.668 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ca.renewalready.api.RenewalReadyApiApplicationTests]: RenewalReadyApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Spring Boot tests	Verify API	2026-10-26T15:54:13.7714475Z 15:54:13.670 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ca.renewalready.api.RenewalReadyApiApplication for test class ca.renewalready.api.RenewalReadyApiApplicationTests
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0742639Z 
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0773500Z   .   ____          _            __ _ _
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0802980Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0811150Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0825727Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0840734Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0851644Z  =========|_|==============|___/=/_/_/_/
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0856090Z 
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0862110Z  :: Spring Boot ::                (v4.1.0)
+Spring Boot tests	Verify API	2026-10-26T15:54:14.0862468Z 
+Spring Boot tests	Verify API	2026-10-26T15:54:14.1730956Z 2026-10-26T15:54:14.073Z  INFO 2526 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : Starting RenewalReadyApiApplicationTests using Java 21.0.12.1 with PID 2526 (started by runner in /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/backend)
+Spring Boot tests	Verify API	2026-10-26T15:54:14.1763816Z 2026-10-26T15:54:14.076Z  INFO 2526 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+Spring Boot tests	Verify API	2026-10-26T15:54:15.7849656Z 2026-10-26T15:54:15.718Z  INFO 2526 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+Spring Boot tests	Verify API	2026-10-26T15:54:15.7852605Z 2026-10-26T15:54:15.770Z  INFO 2526 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : Started RenewalReadyApiApplicationTests in 2.041 seconds (process running for 3.467)
+Spring Boot tests	Verify API	2026-10-26T15:54:16.1834826Z Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Spring Boot tests	Verify API	2026-10-26T15:54:16.3835295Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.10/byte-buddy-agent-1.18.10.jar)
+Spring Boot tests	Verify API	2026-10-26T15:54:16.3836847Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+Spring Boot tests	Verify API	2026-10-26T15:54:16.3838048Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+Spring Boot tests	Verify API	2026-10-26T15:54:16.3839484Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Spring Boot tests	Verify API	2026-10-26T15:54:16.3931795Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Spring Boot tests	Verify API	2026-10-26T15:54:16.7375079Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.426 s -- in ca.renewalready.api.RenewalReadyApiApplicationTests
+Spring Boot tests	Verify API	2026-10-26T15:54:16.7403783Z [INFO] Running ca.renewalready.api.calculation.MortgageCalculationServiceTest
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8157989Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s -- in ca.renewalready.api.calculation.MortgageCalculationServiceTest
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8673045Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8673730Z [INFO] Results:
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8674149Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8678387Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8679159Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8709918Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:16.8710383Z [INFO] --- jar:3.5.0:jar (default-jar) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:17.1157508Z [INFO] Building jar: /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/backend/target/backend-0.0.1-SNAPSHOT.jar
+Spring Boot tests	Verify API	2026-10-26T15:54:17.1563812Z [INFO] 
+Spring Boot tests	Verify API	2026-10-26T15:54:17.1573735Z [INFO] --- spring-boot:4.1.0:repackage (repackage) @ backend ---
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4497859Z [INFO] Replacing main artifact /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/backend/target/backend-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4500507Z [INFO] The original artifact has been renamed to /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/backend/target/backend-0.0.1-SNAPSHOT.jar.original
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4502743Z [INFO] ------------------------------------------------------------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4503461Z [INFO] BUILD SUCCESS
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4504068Z [INFO] ------------------------------------------------------------------------
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4511516Z [INFO] Total time:  9.163 s
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4517176Z [INFO] Finished at: 2026-10-26T15:54:17Z
+Spring Boot tests	Verify API	2026-10-26T15:54:17.4518022Z [INFO] ------------------------------------------------------------------------
+Spring Boot tests	Post Run actions/setup-java@v4	﻿2026-10-26T15:54:17.4944945Z Post job cleanup.
+Spring Boot tests	Post Run actions/setup-java@v4	2026-10-26T15:54:17.6343794Z (node:2589) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Spring Boot tests	Post Run actions/setup-java@v4	2026-10-26T15:54:17.6344629Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Spring Boot tests	Post Run actions/setup-java@v4	2026-10-26T15:54:17.6349099Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-3cd75281cf3ac2f84baeb2b8b70c7aaf9c0427643b4ae81b8a7a9db6f9ac851e, not saving cache.
+Spring Boot tests	Post Run actions/checkout@v4	﻿2026-10-26T15:54:17.6550935Z Post job cleanup.
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7572550Z [command]/usr/bin/git version
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7630583Z git version 2.55.0
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7684039Z Temporarily overriding HOME='/home/runner/work/_temp/83feb67e-6481-4ebe-8ba5-c612d4bcd00e' before making global git config changes
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7685889Z Adding repository directory to the temporary git global config as a safe directory
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7692898Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7771345Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.7822709Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8176915Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8219695Z http.https://github.com/.extraheader
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8246840Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8295503Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8641057Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Spring Boot tests	Post Run actions/checkout@v4	2026-10-26T15:54:17.8684143Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Spring Boot tests	Complete job	﻿2026-10-26T15:54:17.9106671Z Cleaning up orphan processes
+Spring Boot tests	Complete job	2026-10-26T15:54:17.9532451Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Angular build and tests	Set up job	﻿2026-10-26T15:53:57.7871815Z Current runner version: '2.338.0'
+Angular build and tests	Set up job	2026-10-26T15:53:57.7898297Z ##[group]Runner Image Provisioner
+Angular build and tests	Set up job	2026-10-26T15:53:57.7899293Z Hosted Compute Agent
+Angular build and tests	Set up job	2026-10-26T15:53:57.7899843Z Version: 20261021.618
+Angular build and tests	Set up job	2026-10-26T15:53:57.7900441Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Angular build and tests	Set up job	2026-10-26T15:53:57.7901333Z Build Date: 2026-10-21T00:45:21Z
+Angular build and tests	Set up job	2026-10-26T15:53:57.7901990Z Worker ID: {a3f7ddee-5142-48df-82d4-97d6cd33d096}
+Angular build and tests	Set up job	2026-10-26T15:53:57.7902661Z Region: northcentralus
+Angular build and tests	Set up job	2026-10-26T15:53:57.7903206Z Cloud: Azure
+Angular build and tests	Set up job	2026-10-26T15:53:57.7903729Z ##[endgroup]
+Angular build and tests	Set up job	2026-10-26T15:53:57.7905051Z ##[group]Operating System
+Angular build and tests	Set up job	2026-10-26T15:53:57.7905625Z Ubuntu
+Angular build and tests	Set up job	2026-10-26T15:53:57.7906165Z 24.04.5
+Angular build and tests	Set up job	2026-10-26T15:53:57.7906655Z LTS
+Angular build and tests	Set up job	2026-10-26T15:53:57.7907167Z ##[endgroup]
+Angular build and tests	Set up job	2026-10-26T15:53:57.7907694Z ##[group]Runner Image
+Angular build and tests	Set up job	2026-10-26T15:53:57.7908599Z Image: ubuntu-24.04
+Angular build and tests	Set up job	2026-10-26T15:53:57.7909129Z Version: 20261012.334.1
+Angular build and tests	Set up job	2026-10-26T15:53:57.7910155Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Angular build and tests	Set up job	2026-10-26T15:53:57.7911824Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Angular build and tests	Set up job	2026-10-26T15:53:57.7912708Z ##[endgroup]
+Angular build and tests	Set up job	2026-10-26T15:53:57.7913768Z ##[group]GITHUB_TOKEN Permissions
+Angular build and tests	Set up job	2026-10-26T15:53:57.7916116Z Contents: read
+Angular build and tests	Set up job	2026-10-26T15:53:57.7916702Z Metadata: read
+Angular build and tests	Set up job	2026-10-26T15:53:57.7917266Z ##[endgroup]
+Angular build and tests	Set up job	2026-10-26T15:53:57.7920145Z Secret source: Actions
+Angular build and tests	Set up job	2026-10-26T15:53:57.7921115Z Cache mode: write
+Angular build and tests	Set up job	2026-10-26T15:53:57.7921935Z Prepare workflow directory
+Angular build and tests	Set up job	2026-10-26T15:53:57.8351551Z Prepare all required actions
+Angular build and tests	Set up job	2026-10-26T15:53:57.8423176Z Getting action download info
+Angular build and tests	Set up job	2026-10-26T15:53:58.0988902Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Angular build and tests	Set up job	2026-10-26T15:53:58.2417356Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Angular build and tests	Set up job	2026-10-26T15:53:58.5871292Z Complete job name: Angular build and tests
+Angular build and tests	Run actions/checkout@v4	﻿2026-10-26T15:53:58.6639299Z ##[group]Run actions/checkout@v4
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6640180Z with:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6640778Z   repository: MarvelousJade/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6645519Z   token: ***
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6646041Z   ssh-strict: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6646554Z   ssh-user: git
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6647080Z   persist-credentials: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6647628Z   clean: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6648361Z   sparse-checkout-cone-mode: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6648946Z   fetch-depth: 1
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6649444Z   fetch-tags: false
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6649959Z   show-progress: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6650466Z   lfs: false
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6650983Z   submodules: false
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6651487Z   set-safe-directory: true
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6652028Z   allow-unsafe-pr-checkout: false
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.6652847Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7698212Z Syncing repository: MarvelousJade/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7701040Z ##[group]Getting Git version info
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7702564Z Working directory is '/home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner'
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7704491Z [command]/usr/bin/git version
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7759151Z git version 2.55.0
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7776659Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7799825Z Temporarily overriding HOME='/home/runner/work/_temp/34bdc838-5007-4bab-8a3c-804f6bdf3493' before making global git config changes
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7801932Z Adding repository directory to the temporary git global config as a safe directory
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7818883Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7853176Z Deleting the contents of '/home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner'
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7859127Z ##[group]Initializing the repository
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7863802Z [command]/usr/bin/git init /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7955655Z hint: Using 'master' as the name for the initial branch. This default branch name
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7957075Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7958228Z hint: to use in all of your new repositories, which will suppress this warning,
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7959138Z hint: call:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7959610Z hint:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7960273Z hint: 	git config --global init.defaultBranch <name>
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7960926Z hint:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7961544Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7962535Z hint: 'development'. The just-created branch can be renamed via this command:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7963309Z hint:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7963829Z hint: 	git branch -m <name>
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7964370Z hint:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7965038Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7970367Z Initialized empty Git repository in /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/.git/
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.7980374Z [command]/usr/bin/git remote add origin https://github.com/MarvelousJade/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8026653Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8028322Z ##[group]Disabling automatic garbage collection
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8031495Z [command]/usr/bin/git config --local gc.auto 0
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8062217Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8063563Z ##[group]Setting up auth
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8069397Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8097515Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8469221Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8506568Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8779543Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.8820748Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.9044420Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.9086838Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.9088401Z ##[group]Fetching the repository
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:58.9097747Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e4711bbf2d8bf117c6a9f5b4d292923aac561ab4:refs/remotes/origin/main
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4145243Z From https://github.com/MarvelousJade/mortgage-renewal-planner
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4147088Z  * [new ref]         e4711bbf2d8bf117c6a9f5b4d292923aac561ab4 -> origin/main
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4151308Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4152763Z ##[group]Determining the checkout info
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4155064Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4159591Z [command]/usr/bin/git sparse-checkout disable
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4219928Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4253626Z ##[group]Checking out the ref
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4258629Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4512000Z Switched to a new branch 'main'
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4517045Z branch 'main' set up to track 'origin/main'.
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4527281Z ##[endgroup]
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4563107Z [command]/usr/bin/git log -1 --format=%H
+Angular build and tests	Run actions/checkout@v4	2026-10-26T15:53:59.4584961Z e4711bbf2d8bf117c6a9f5b4d292923aac561ab4
+Angular build and tests	Run actions/setup-node@v4	﻿2026-10-26T15:53:59.4960232Z ##[group]Run actions/setup-node@v4
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4961737Z with:
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4962814Z   node-version: 22
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4963959Z   cache: npm
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4965407Z   cache-dependency-path: frontend/package-lock.json
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4967048Z   always-auth: false
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4968539Z   check-latest: false
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4979514Z   token: ***
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.4980594Z ##[endgroup]
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.6391134Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.6394640Z (node:2181) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.6398054Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:53:59.6400905Z ##[group]Environment details
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:02.8843728Z node: v22.23.3
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:02.8844802Z npm: 10.9.9
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:02.8845244Z yarn: 1.22.22
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:02.8846653Z ##[endgroup]
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:02.8907031Z [command]/opt/hostedtoolcache/node/22.23.3/x64/bin/npm config get cache
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:03.1737230Z /home/runner/.npm
+Angular build and tests	Run actions/setup-node@v4	2026-10-26T15:54:03.3189782Z npm cache is not found
+Angular build and tests	Install dependencies	﻿2026-10-26T15:54:03.3328379Z ##[group]Run npm ci
+Angular build and tests	Install dependencies	2026-10-26T15:54:03.3328965Z ^[[36;1mnpm ci^[[0m
+Angular build and tests	Install dependencies	2026-10-26T15:54:03.3549711Z shell: /usr/bin/bash -e {0}
+Angular build and tests	Install dependencies	2026-10-26T15:54:03.3550203Z ##[endgroup]
+Angular build and tests	Install dependencies	2026-10-26T15:54:06.7722379Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+Angular build and tests	Install dependencies	2026-10-26T15:54:07.2117297Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Angular build and tests	Install dependencies	2026-10-26T15:54:07.2129929Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1917571Z 
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1919212Z added 539 packages, and audited 540 packages in 9s
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1919935Z 
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1920603Z 115 packages are looking for funding
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1921308Z   run `npm fund` for details
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1930114Z 
+Angular build and tests	Install dependencies	2026-10-26T15:54:12.1931121Z found 0 vulnerabilities
+Angular build and tests	Audit all dependencies	﻿2026-10-26T15:54:12.2596984Z ##[group]Run npm run audit:dependencies
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.2597498Z ^[[36;1mnpm run audit:dependencies^[[0m
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.2645126Z shell: /usr/bin/bash -e {0}
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.2645551Z ##[endgroup]
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.3945556Z 
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.3946781Z > renewal-ready-web@0.0.0 audit:dependencies
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.3947478Z > npm audit
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.3947828Z 
+Angular build and tests	Audit all dependencies	2026-10-26T15:54:12.8219640Z found 0 vulnerabilities
+Angular build and tests	Unit tests	﻿2026-10-26T15:54:12.8398427Z ##[group]Run npm run test:ci -- --no-progress
+Angular build and tests	Unit tests	2026-10-26T15:54:12.8399009Z ^[[36;1mnpm run test:ci -- --no-progress^[[0m
+Angular build and tests	Unit tests	2026-10-26T15:54:12.8440765Z shell: /usr/bin/bash -e {0}
+Angular build and tests	Unit tests	2026-10-26T15:54:12.8441194Z env:
+Angular build and tests	Unit tests	2026-10-26T15:54:12.8441567Z   CHROME_BIN: /usr/bin/google-chrome
+Angular build and tests	Unit tests	2026-10-26T15:54:12.8441926Z ##[endgroup]
+Angular build and tests	Unit tests	2026-10-26T15:54:12.9369671Z 
+Angular build and tests	Unit tests	2026-10-26T15:54:12.9370591Z > renewal-ready-web@0.0.0 test:ci
+Angular build and tests	Unit tests	2026-10-26T15:54:12.9371254Z > ng test --watch=false --browsers=ChromeHeadless --no-progress
+Angular build and tests	Unit tests	2026-10-26T15:54:12.9371799Z 
+Angular build and tests	Unit tests	2026-10-26T15:54:13.8024047Z ^[[33m❯^[[39m Building...
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1119090Z ^[[32m✔^[[39m Building...
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1129161Z ^[[1mInitial chunk files^[[22m                  ^[[2m | ^[[22m^[[1mNames^[[22m                             ^[[2m | ^[[22m ^[[1mRaw size^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1130696Z ^[[32mchunk-AMZPZVJ4.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m  ^[[36m2.46 MB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1132298Z ^[[32mpolyfills.js^[[39m                         ^[[2m | ^[[22m^[[2mpolyfills^[[22m                         ^[[2m | ^[[22m  ^[[36m1.04 MB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1134855Z ^[[32mchunk-ZO34TQMH.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m^[[36m283.40 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1137773Z ^[[32mchunk-4LGIRDDJ.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m ^[[36m97.55 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1139518Z ^[[32mjasmine-cleanup-1.js^[[39m                 ^[[2m | ^[[22m^[[2mjasmine-cleanup-1^[[22m                 ^[[2m | ^[[22m ^[[36m67.20 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1141016Z ^[[32mtest_main.js^[[39m                         ^[[2m | ^[[22m^[[2mtest_main^[[22m                         ^[[2m | ^[[22m ^[[36m42.43 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1142890Z ^[[32mchunk-Z7IGXH4Z.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m ^[[36m18.05 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1144726Z ^[[32mchunk-P6TBIP6O.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m ^[[36m12.24 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1146774Z ^[[32mspec-app-comparison-freshness.spec.js^[[39m^[[2m | ^[[22m^[[2mspec-app-comparison-freshness.spec^[[22m^[[2m | ^[[22m  ^[[36m8.19 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1149211Z ^[[32mspec-app-http-xsrf.spec.js^[[39m           ^[[2m | ^[[22m^[[2mspec-app-http-xsrf.spec^[[22m           ^[[2m | ^[[22m  ^[[36m2.60 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1150932Z ^[[32mchunk-3FMBEB3S.js^[[39m                    ^[[2m | ^[[22m^[[2m-^[[22m                                 ^[[2m | ^[[22m  ^[[36m2.13 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1152490Z ^[[32mspec-app-app.spec.js^[[39m                 ^[[2m | ^[[22m^[[2mspec-app-app.spec^[[22m                 ^[[2m | ^[[22m  ^[[36m1.38 kB^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1153543Z ^[[32mstyles.css^[[39m                           ^[[2m | ^[[22m^[[2mstyles^[[22m                            ^[[2m | ^[[22m^[[36m954 bytes^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1155377Z ^[[32mjasmine-cleanup-0.js^[[39m                 ^[[2m | ^[[22m^[[2mjasmine-cleanup-0^[[22m                 ^[[2m | ^[[22m^[[36m519 bytes^[[39m^[[2m | ^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1156348Z 
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1157226Z ^[[1m ^[[22m                                    ^[[2m | ^[[22m^[[1mInitial total^[[22m                     ^[[2m | ^[[22m  ^[[1m4.04 MB^[[22m
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1158266Z 
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1159208Z Application bundle generation complete. [2.308 seconds] - 2026-10-26T15:54:16.110Z
+Angular build and tests	Unit tests	2026-10-26T15:54:16.1159890Z 
+Angular build and tests	Unit tests	2026-10-26T15:54:16.2181397Z ^[[32m26 10 2026 15:54:16.216:INFO [karma-server]: ^[[39mKarma v6.4.4 server started at http://localhost:9876/
+Angular build and tests	Unit tests	2026-10-26T15:54:16.2183421Z ^[[32m26 10 2026 15:54:16.218:INFO [launcher]: ^[[39mLaunching browsers ChromeHeadless with concurrency unlimited
+Angular build and tests	Unit tests	2026-10-26T15:54:16.2222527Z ^[[32m26 10 2026 15:54:16.221:INFO [launcher]: ^[[39mStarting browser ChromeHeadless
+Angular build and tests	Unit tests	2026-10-26T15:54:48.7266681Z ^[[32m26 10 2026 15:54:48.726:INFO [Chrome Headless 155.0.0.0 (Linux 0.0.0)]: ^[[39mConnected on socket hFmrxW7RZtswdoZ6AAAA with id 90129354
+Angular build and tests	Unit tests	2026-10-26T15:54:50.7552006Z Chrome Headless 155.0.0.0 (Linux 0.0.0): Executed 0 of 28 SUCCESS (0 secs / 0 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9499656Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 1 of 28 SUCCESS (0 secs / 0.192 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9600765Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 2 of 28 SUCCESS (0 secs / 0.198 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9655484Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 3 of 28 SUCCESS (0 secs / 0.204 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9806567Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 4 of 28 SUCCESS (0 secs / 0.213 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9817697Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 5 of 28 SUCCESS (0 secs / 0.216 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9834611Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 6 of 28 SUCCESS (0 secs / 0.217 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9856583Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 7 of 28 SUCCESS (0 secs / 0.219 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9877304Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 8 of 28 SUCCESS (0 secs / 0.221 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9898335Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 9 of 28 SUCCESS (0 secs / 0.223 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:50.9916000Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 10 of 28 SUCCESS (0 secs / 0.224 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.1503070Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 11 of 28 SUCCESS (0 secs / 0.381 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.1736442Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 12 of 28 SUCCESS (0 secs / 0.402 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.1939615Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 13 of 28 SUCCESS (0 secs / 0.422 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2095192Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 14 of 28 SUCCESS (0 secs / 0.435 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2340642Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 15 of 28 SUCCESS (0 secs / 0.449 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2490909Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 16 of 28 SUCCESS (0 secs / 0.464 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2689112Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 17 of 28 SUCCESS (0 secs / 0.482 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2854749Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 18 of 28 SUCCESS (0 secs / 0.498 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.2967579Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 19 of 28 SUCCESS (0 secs / 0.507 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3026014Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 20 of 28 SUCCESS (0 secs / 0.512 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3160065Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 21 of 28 SUCCESS (0 secs / 0.524 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3262692Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 22 of 28 SUCCESS (0 secs / 0.532 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3396765Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 23 of 28 SUCCESS (0 secs / 0.544 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3464002Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 24 of 28 SUCCESS (0 secs / 0.55 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3545828Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 25 of 28 SUCCESS (0 secs / 0.557 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3663611Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 26 of 28 SUCCESS (0 secs / 0.568 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3751616Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 27 of 28 SUCCESS (0 secs / 0.576 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3863997Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 28 of 28 SUCCESS (0 secs / 0.587 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3896567Z ^[[1A^[[2KChrome Headless 155.0.0.0 (Linux 0.0.0): Executed 28 of 28 SUCCESS (0.636 secs / 0.587 secs)
+Angular build and tests	Unit tests	2026-10-26T15:54:51.3911305Z TOTAL: 28 SUCCESS
+Angular build and tests	Production build	﻿2026-10-26T15:54:51.7346590Z ##[group]Run npm run build
+Angular build and tests	Production build	2026-10-26T15:54:51.7346992Z ^[[36;1mnpm run build^[[0m
+Angular build and tests	Production build	2026-10-26T15:54:51.7389955Z shell: /usr/bin/bash -e {0}
+Angular build and tests	Production build	2026-10-26T15:54:51.7390346Z ##[endgroup]
+Angular build and tests	Production build	2026-10-26T15:54:51.8299601Z 
+Angular build and tests	Production build	2026-10-26T15:54:51.8300894Z > renewal-ready-web@0.0.0 build
+Angular build and tests	Production build	2026-10-26T15:54:51.8301598Z > ng build
+Angular build and tests	Production build	2026-10-26T15:54:51.8301831Z 
+Angular build and tests	Production build	2026-10-26T15:54:52.2516776Z ^[[33m❯^[[39m Building...
+Angular build and tests	Production build	2026-10-26T15:54:57.0859063Z ^[[32m✔^[[39m Building...
+Angular build and tests	Production build	2026-10-26T15:54:57.0876133Z ^[[1mInitial chunk files^[[22m  ^[[2m | ^[[22m^[[1mNames^[[22m        ^[[2m | ^[[22m ^[[1mRaw size^[[22m^[[2m | ^[[22m^[[1mEstimated transfer size^[[22m
+Angular build and tests	Production build	2026-10-26T15:54:57.0878024Z ^[[32mmain-LV2AHMZN.js^[[39m     ^[[2m | ^[[22m^[[2mmain^[[22m         ^[[2m | ^[[22m^[[36m316.48 kB^[[39m^[[2m | ^[[22m               ^[[36m82.00 kB^[[39m
+Angular build and tests	Production build	2026-10-26T15:54:57.0879340Z ^[[32mpolyfills-5CFQRCPP.js^[[39m^[[2m | ^[[22m^[[2mpolyfills^[[22m    ^[[2m | ^[[22m ^[[36m34.59 kB^[[39m^[[2m | ^[[22m               ^[[36m11.33 kB^[[39m
+Angular build and tests	Production build	2026-10-26T15:54:57.0880508Z ^[[32mstyles-LAJKIV7V.css^[[39m  ^[[2m | ^[[22m^[[2mstyles^[[22m       ^[[2m | ^[[22m^[[36m683 bytes^[[39m^[[2m | ^[[22m              ^[[36m683 bytes^[[39m
+Angular build and tests	Production build	2026-10-26T15:54:57.0881166Z 
+Angular build and tests	Production build	2026-10-26T15:54:57.0881800Z ^[[1m ^[[22m                    ^[[2m | ^[[22m^[[1mInitial total^[[22m^[[2m | ^[[22m^[[1m351.75 kB^[[22m^[[2m | ^[[22m               ^[[1m94.01 kB^[[22m
+Angular build and tests	Production build	2026-10-26T15:54:57.0882231Z 
+Angular build and tests	Production build	2026-10-26T15:54:57.0882662Z Application bundle generation complete. [4.833 seconds] - 2026-10-26T15:54:57.085Z
+Angular build and tests	Production build	2026-10-26T15:54:57.0883116Z 
+Angular build and tests	Production build	2026-10-26T15:54:57.0891260Z Output location: /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner/frontend/dist/frontend
+Angular build and tests	Production build	2026-10-26T15:54:57.0891831Z 
+Angular build and tests	Post Run actions/setup-node@v4	﻿2026-10-26T15:54:57.2125553Z Post job cleanup.
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:57.3319552Z (node:2585) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:57.3320820Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:57.3525215Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner --files-from manifest.txt --use-compress-program zstdmt
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:57.7068824Z (node:2585) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:58.6989200Z Sent 43530117 of 43530117 (100.0%), 41.5 MBs/sec
+Angular build and tests	Post Run actions/setup-node@v4	2026-10-26T15:54:59.1748908Z Cache saved with the key: node-cache-Linux-x64-npm-f4169d7ffc09a36959b817251b162cd6008d8d177bda3b95eff0110889d789f8
+Angular build and tests	Post Run actions/checkout@v4	﻿2026-10-26T15:54:59.1913905Z Post job cleanup.
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2726426Z [command]/usr/bin/git version
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2764303Z git version 2.55.0
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2800204Z Temporarily overriding HOME='/home/runner/work/_temp/e22704d8-da85-46d1-adb4-75cea4356898' before making global git config changes
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2801913Z Adding repository directory to the temporary git global config as a safe directory
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2804974Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mortgage-renewal-planner/mortgage-renewal-planner
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2842194Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.2872412Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3079360Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3103371Z http.https://github.com/.extraheader
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3123818Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3160797Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3370935Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Angular build and tests	Post Run actions/checkout@v4	2026-10-26T15:54:59.3408415Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Angular build and tests	Complete job	﻿2026-10-26T15:54:59.3742229Z Cleaning up orphan processes
+Angular build and tests	Complete job	2026-10-26T15:54:59.4087121Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

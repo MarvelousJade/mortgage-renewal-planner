@@ -8,6 +8,9 @@ Initially delivered on an isolated branch while Render deployment was in progres
 After deployment work completed, its evidence was merged with this release and the
 combined result integrated into local main. No push or redeployment was performed.
 See [integration verification](../evidence/comparison-freshness/integration/verification.json).
+**Subsequent publication:** the combined release and dependency repair are now
+published/deployed at `e4711bb`; see [live release checks](release-publication.md).
+The local-stage descriptions below retain their original scope.
 
 ## Reproduce current checks
 
@@ -128,9 +131,10 @@ makes no claim that its sample outputs were independently financially validated.
   [dependency remediation](dependency-remediation.md): current full/production npm
   audits report zero known findings, with compatibility checks. Original evidence
   remains unchanged; zero findings does not establish complete security.
-- Integrated into local main after the deployment agent finished. Not pushed or
-  redeployed. The other agent's public smoke evidence applies to `dfcd22c`, not
-  to the new comparison-freshness frontend.
+- Initial integration was local only; the subsequently authorized publication
+  deployed `e4711bb`. [New live checks](release-publication.md) verify comparison
+  freshness and the patched Angular version. Earlier public evidence applies only
+  to its recorded older revision.
 - No independent finance oracle, lender validation, user study, timing benchmark,
   adoption, workflow-time reduction or business impact measurement.
 - Mobile, keyboard-only and screen-reader review remain outstanding. `role=status`

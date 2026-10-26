@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — dependency remediation (2026-10-26)
+## Published — dependency remediation (2026-10-26)
 
 - Patch Angular framework/compiler packages to 20.3.34 and CLI/build to 20.3.41.
 - Refresh vulnerable transitive dependencies without forced peers or advisory exclusions.
@@ -11,10 +11,12 @@
 - Add full-dependency audit gates to GitHub Actions and Jenkins.
 - Retain package/advisory inventory, failed update attempts, and compatibility evidence.
 
-Not pushed or redeployed. No backend or calculation changes. See the
-[dependency remediation record](docs/engineering/dependency-remediation.md).
+Published to GitHub main and deployed to Render as `e4711bb`. Hosted CI and live
+browser smoke passed; see the [publication record](docs/engineering/release-publication.md).
+No backend or calculation changes. The [dependency remediation record](docs/engineering/dependency-remediation.md)
+retains package-level investigations and local verification.
 
-## Unreleased — comparison freshness (2026-10-26)
+## Published — comparison freshness (2026-10-26)
 
 - Clear completed comparisons and obsolete errors when mortgage/offer inputs change.
 - Cancel obsolete client HTTP subscriptions on edits, repeat submission and teardown.
@@ -25,8 +27,8 @@ Not pushed or redeployed. No backend or calculation changes. See the
   browser smoke harness using an isolated local Java API.
 - Document requirements, references, investigations, verification and interview evidence.
 
-Integrated into local main after combined-release verification. Not pushed or
-redeployed; the public Render deployment remains the previously verified revision.
+Initially integrated locally after combined-release verification; subsequently
+published and deployed in `e4711bb` together with the dependency remediation.
 No calculation or API contract changes. The dependency findings recorded at that
 stage were resolved in the dependency-remediation increment above; historical raw
 audit evidence is preserved in the [verification record](docs/engineering/comparison-freshness-verification.md).

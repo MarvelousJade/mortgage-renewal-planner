@@ -1,0 +1,19 @@
+{
+  "id": "e9957281-78bd-4a26-a013-a3f2d9cb0486",
+  "labels": [
+    {
+      "name": "resource",
+      "value": "srv-dbfk048m7kps739d44bg"
+    },
+    {
+      "name": "level",
+      "value": "info"
+    },
+    {
+      "name": "type",
+      "value": "app"
+    }
+  ],
+  "message": "#16 5.726 found 0 vulnerabilities",
+  "timestamp": "2026-10-26T15:54:07.294779556Z"
+}

@@ -4,6 +4,9 @@ RenewalReady is a privacy-first Canadian mortgage renewal comparison tool. A hom
 
 This is an independent educational project. It is not affiliated with RBC or any lender and does not provide financial advice.
 
+**Live demo:** https://renewalready.onrender.com — free Render hosting may need a cold
+start. See the [published release verification](docs/engineering/release-publication.md).
+
 ![RenewalReady home and comparison experience](docs/renewalready-home.png)
 
 ## What the MVP does

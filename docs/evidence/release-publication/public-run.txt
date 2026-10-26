@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Public HTML and referenced JS/CSS return 200",
+      "passed": true
+    },
+    {
+      "name": "Public API health is UP",
+      "passed": true
+    },
+    {
+      "name": "Public synthetic comparison matches saved baseline in every calculation field",
+      "passed": true
+    },
+    {
+      "name": "Invalid API principal returns 400",
+      "passed": true
+    },
+    {
+      "name": "Live Angular bootstraps with patched version 20.3.34",
+      "passed": true
+    },
+    {
+      "name": "Live methodology navigation",
+      "passed": true
+    },
+    {
+      "name": "Live default two-offer comparison renders",
+      "passed": true
+    },
+    {
+      "name": "Live input edit clears old results and re-comparison uses new balance",
+      "passed": true
+    },
+    {
+      "name": "Live add/compare/remove workflow",
+      "passed": true
+    },
+    {
+      "name": "Live invalid balance gives feedback without an API request",
+      "passed": true
+    },
+    {
+      "name": "Browser-local offline failure preserves inputs and live retry succeeds",
+      "passed": true
+    },
+    {
+      "name": "No uncaught live browser runtime exceptions",
+      "passed": true
+    }
+  ]
+}

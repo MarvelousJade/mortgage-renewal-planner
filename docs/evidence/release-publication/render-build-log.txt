@@ -1,0 +1,19 @@
+{
+  "id": "e342e4c6-7647-4845-8eda-469643113a1f",
+  "labels": [
+    {
+      "name": "resource",
+      "value": "srv-dbfk048m7kps739d44bg"
+    },
+    {
+      "name": "level",
+      "value": "info"
+    },
+    {
+      "name": "type",
+      "value": "app"
+    }
+  ],
+  "message": "#24 8.372 [INFO] BUILD SUCCESS",
+  "timestamp": "2026-10-26T15:54:26.993269479Z"
+}

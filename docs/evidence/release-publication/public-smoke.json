@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-26T15:57:37.545Z",
+  "target": "https://renewalready.onrender.com",
+  "releaseRevision": "e4711bbf2d8bf117c6a9f5b4d292923aac561ab4",
+  "localRevision": "e4711bbf2d8bf117c6a9f5b4d292923aac561ab4",
+  "node": "v22.23.3",
+  "fixture": {
+    "principal": 425000,
+    "remainingAmortizationMonths": 264,
+    "offers": [
+      {
+        "name": "Current lender",
+        "annualInterestRate": 4.79,
+        "termMonths": 60,
+        "paymentFrequency": "MONTHLY",
+        "lumpSumPayment": 0,
+        "additionalPaymentPerPeriod": 0
+      }
+    ]
+  },
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 1300,
+      "sha256": "cfb04d67adbea17101d6bf9f0b3e4e31b7df0216af0f952d5b3224d1591b2d3b"
+    },
+    {
+      "path": "/styles-LAJKIV7V.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 683,
+      "sha256": "31594483262f29f6034dbb31d6ff8bf9f848e6db228275c4537c7a0c9a7e205d"
+    },
+    {
+      "path": "/styles-LAJKIV7V.css",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 683,
+      "sha256": "31594483262f29f6034dbb31d6ff8bf9f848e6db228275c4537c7a0c9a7e205d"
+    },
+    {
+      "path": "/polyfills-5CFQRCPP.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 34585,
+      "sha256": "15c6f58707b9b19116fde3a3f6a0ce9cf83427d64a91e95cb91fe1056c3da616"
+    },
+    {
+      "path": "/main-LV2AHMZN.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 316477,
+      "sha256": "4c096acb4205dd91bdaf0af76f6e9b2811974f2075030d56e54f69ba7031bfc1"
+    },
+    {
+      "path": "/actuator/health",
+      "status": 200,
+      "contentType": "application/vnd.spring-boot.actuator.v3+json",
+      "bytes": 49,
+      "sha256": "f5d81755935209a3ae596d4553d269cbbe8d08a27dd95b05fe0b7c544eb7ed71",
+      "body": "{\"groups\":[\"liveness\",\"readiness\"],\"status\":\"UP\"}"
+    },
+    {
+      "path": "/api/v1/mortgage-comparisons",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 564,
+      "sha256": "a9f3b0a588e3abe02b3012d4ebcde14bee3453b9f2bb2398208277fb72e0fcac",
+      "body": "{\"principal\":425000.00,\"remainingAmortizationMonths\":264,\"interestAssumption\":\"Canadian fixed mortgage rate: nominal annual rate compounded semi-annually, not in advance.\",\"generatedAt\":\"2026-10-26T15:57:41.910436539Z\",\"results\":[{\"name\":\"Current lender\",\"annualInterestRate\":4.790,\"termMonths\":60,\"paymentFrequency\":\"MONTHLY\",\"regularPayment\":2596.12,\"additionalPaymentPerPeriod\":0.00,\"lumpSumPayment\":0.00,\"paymentsDuringTerm\":60,\"totalPaidDuringTerm\":155767.20,\"interestPaidDuringTerm\":93857.11,\"principalPaidDuringTerm\":61910.09,\"balanceAtTermEnd\":363089.91}]}"
+    },
+    {
+      "path": "/api/v1/mortgage-comparisons",
+      "status": 400,
+      "contentType": "application/json",
+      "bytes": 155,
+      "sha256": "7ea176cba09fa52c4c7436968508d34253e5b08aa943008d924d06e3897a3df5",
+      "body": "{\"timestamp\":\"2026-10-26T15:57:42.814616431Z\",\"status\":400,\"message\":\"Validation failed\",\"fields\":{\"principal\":\"must be greater than or equal to 1000.00\"}}"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Public HTML and referenced JS/CSS return 200",
+      "passed": true
+    },
+    {
+      "name": "Public API health is UP",
+      "passed": true
+    },
+    {
+      "name": "Public synthetic comparison matches saved baseline in every calculation field",
+      "passed": true
+    },
+    {
+      "name": "Invalid API principal returns 400",
+      "passed": true
+    },
+    {
+      "name": "Live Angular bootstraps with patched version 20.3.34",
+      "passed": true
+    },
+    {
+      "name": "Live methodology navigation",
+      "passed": true
+    },
+    {
+      "name": "Live default two-offer comparison renders",
+      "passed": true
+    },
+    {
+      "name": "Live input edit clears old results and re-comparison uses new balance",
+      "passed": true
+    },
+    {
+      "name": "Live add/compare/remove workflow",
+      "passed": true
+    },
+    {
+      "name": "Live invalid balance gives feedback without an API request",
+      "passed": true
+    },
+    {
+      "name": "Browser-local offline failure preserves inputs and live retry succeeds",
+      "passed": true
+    },
+    {
+      "name": "No uncaught live browser runtime exceptions",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.47",
+    "revision": "@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.19"
+  },
+  "angularVersion": "20.3.34",
+  "apiRequestsObservedInBrowser": 5,
+  "passed": true,
+  "limits": [
+    "Programmatic desktop Chrome checks, not human usability/accessibility testing.",
+    "Offline failure is simulated only in the private browser; the shared service is not modified.",
+    "Saved-baseline equality is one synthetic fixture, not independent finance validation or a benchmark."
+  ]
+}

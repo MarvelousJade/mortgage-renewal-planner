@@ -1,0 +1,76 @@
+{
+  "recordedAt": "2026-10-26T16:00:58.024Z",
+  "releaseRevision": "e4711bbf2d8bf117c6a9f5b4d292923aac561ab4",
+  "repository": {
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "url": "https://github.com/MarvelousJade/mortgage-renewal-planner",
+    "visibility": "PUBLIC"
+  },
+  "remoteMain": "e4711bbf2d8bf117c6a9f5b4d292923aac561ab4\trefs/heads/main",
+  "render": {
+    "id": "dep-dbfnf43bc2fs7397geg0",
+    "status": "live",
+    "finishedAt": "2026-10-26T15:55:55.74797Z",
+    "url": "https://renewalready.onrender.com",
+    "plan": "free"
+  },
+  "ci": {
+    "url": "https://github.com/MarvelousJade/mortgage-renewal-planner/actions/runs/40353826275",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "e4711bbf2d8bf117c6a9f5b4d292923aac561ab4"
+  },
+  "results": {
+    "frontendTests": 28,
+    "backendTests": 4,
+    "fullNpmFindings": 0,
+    "publicGroupedChecks": 12,
+    "publicPassed": true
+  },
+  "environment": {
+    "node": "v22.23.3",
+    "os": "win32",
+    "release": "10.0.26300",
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor              ",
+    "ramBytes": 17101787136,
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.47",
+      "revision": "@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.19"
+    }
+  },
+  "sourceHashEncoding": "Git release blob bytes, before working-tree line-ending conversion",
+  "sources": {
+    "frontend/package.json": "f9eb6ecaf3d6e586262fa433b8402b3a2fbc22e3225bfa20c528e616e0cf283b",
+    "frontend/package-lock.json": "978650cf2dc2accc6fc579d1604167238dbec75d8eda00f252b8cb3189e081d8",
+    "frontend/src/app/app.ts": "0ad6e98d9815bed8b058297d31f31091bf6e145c50e4345be819f00459029e9b",
+    "frontend/src/app/app.html": "65a35afd8b76701598244d13c1f2ae1f775f39327484ebd9bf3c7b58c3f64b26",
+    "Dockerfile": "f53eb837de7ff5ff93675324bef84bc18df1835c1ddaf66861f9c3f1e0667719",
+    "backend/pom.xml": "ca18bd345dad1db95624205a73bb136e7564b669855c6591e0212b67a4527435"
+  },
+  "artifacts": {
+    "check-public.mjs": "53d75884379750b9f02481597ba64b7839ee28f41b100d15d0ec3b44a1f95791",
+    "ci-current.json": "f3cdfd7f69b9732b95a759a2484c4e93c362938d42c3232f452fc75e76b401fc",
+    "ci-initial.json": "1cd03c78398a181316096541ae159fb190fad485a163efa416d6cc7a1c8559a5",
+    "ci-log.txt": "02adcd9bf311a49e7186631c952618f272a1d384f0b52cb1bcb030b7da703c24",
+    "deploy-current.json": "9bb72a4a99c1662f7ae0100e75b221efa9ddd5b12aa37ba61cc56249ec9ba054",
+    "deploy-initial.json": "389719b8b5482f366df9b5ec60271950fddda94549b3a8ac2522143780704804",
+    "public-browser.png": "441533873247a6bbc0f7dfebda5cc0b59341beda131c17326c7cd8c98d128643",
+    "public-run.txt": "b74159a98274bfe986605ad2ec7445656e26314f0f7a3defd8507c9c8a8e66cb",
+    "public-smoke.json": "5c519be49e5681adda22264bfb47d42c5256d1c0d31e50873f17fac63d8ac087",
+    "remote-main.txt": "535a9d82f80124d0fbd9f3978c3c305f900db6949641819873d7ee2fd519033b",
+    "render-audit-log.txt": "ca9b90629173ede0957da9257168bb2391647a355d5789d6dda9d50ae338dc3b",
+    "render-build-log.txt": "813cc179597cbfa2d60c87fcb57f734794805265f7f0ced553eed168cd9a03f1",
+    "repo.json": "81c678d2cc8b758865449e0c47a23def7be1b377f1a0a914feb0b5e10e6852ce",
+    "service.json": "0587f98d9aa6e3eb308428236c68d8757b963cbe598b57be4f2766e425540880"
+  },
+  "limits": [
+    "Programmatic desktop Chrome checks, not human usability/accessibility testing.",
+    "Offline failure is simulated only in the private browser; the shared service is not modified.",
+    "Saved-baseline equality is one synthetic fixture, not independent finance validation or a benchmark."
+  ]
+}

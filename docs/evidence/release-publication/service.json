@@ -1,0 +1,55 @@
+{
+  "service": {
+    "autoDeploy": "yes",
+    "autoDeployTrigger": "commit",
+    "branch": "main",
+    "createdAt": "2026-10-26T11:57:07.085726Z",
+    "dashboardUrl": "https://dashboard.render.com/web/srv-dbfk048m7kps739d44bg",
+    "id": "srv-dbfk048m7kps739d44bg",
+    "name": "renewalready",
+    "notifyOnFail": "default",
+    "ownerId": "tea-csp645jtq21c73eackv0",
+    "repo": "https://github.com/MarvelousJade/mortgage-renewal-planner",
+    "rootDir": "",
+    "serviceDetails": {
+      "buildPlan": "starter",
+      "cache": {
+        "profile": "no-cache"
+      },
+      "env": "docker",
+      "envSpecificDetails": {
+        "dockerCommand": "",
+        "dockerContext": ".",
+        "dockerfilePath": "./Dockerfile"
+      },
+      "healthCheckPath": "/actuator/health",
+      "ipAllowList": [
+        {
+          "cidrBlock": "0.0.0.0/0",
+          "description": "everywhere"
+        }
+      ],
+      "maintenanceMode": {
+        "enabled": false,
+        "uri": ""
+      },
+      "numInstances": 1,
+      "openPorts": [],
+      "plan": "free",
+      "previews": {
+        "generation": "off"
+      },
+      "pullRequestPreviewsEnabled": "no",
+      "region": "ohio",
+      "renderSubdomainPolicy": "enabled",
+      "runtime": "docker",
+      "sshAddress": "srv-dbfk048m7kps739d44bg@ssh.ohio.render.com",
+      "url": "https://renewalready.onrender.com"
+    },
+    "slug": "renewalready",
+    "suspended": "not_suspended",
+    "suspenders": [],
+    "type": "web_service",
+    "updatedAt": "2026-10-26T15:55:55.868284Z"
+  }
+}
