@@ -12,8 +12,10 @@ const sourcePaths = ['frontend/src/app/app.ts', 'frontend/src/app/app.html',
 const sources = {};
 for (const path of sourcePaths) sources[path] = await hash(path);
 const artifacts = {};
-for (const name of (await readdir(dir)).sort()) {
-  if (name !== 'final-manifest.json') artifacts[name] = await hash(join(dir, name));
+for (const entry of (await readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name))) {
+  if (entry.isFile() && entry.name !== 'final-manifest.json') {
+    artifacts[entry.name] = await hash(join(dir, entry.name));
+  }
 }
 const versions = {};
 for (const name of ['@angular/core', '@angular/cli', 'rxjs', 'typescript', 'karma']) {

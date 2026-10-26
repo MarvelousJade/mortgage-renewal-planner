@@ -8,7 +8,7 @@ import { resolve, join, extname } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 
-const dir = 'docs/evidence/comparison-freshness';
+const dir = process.env.EVIDENCE_DIR || 'docs/evidence/comparison-freshness';
 const chromePath = process.env.CHROME_BIN;
 assert(chromePath && process.env.JAVA_HOME, 'Set CHROME_BIN and JAVA_HOME');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -3,8 +3,9 @@
 ## Purpose and acceptance (planned before behavior changes)
 
 Starting revision: `dfcd22ce6fd4e9433c58a2ae6c89110ee5b535ed` on the isolated
-`worktree/clear-meadow-4d2a` branch. The other checkout is deploying; no integration
-into main, push, or Render changes are part of this release.
+`worktree/clear-meadow-4d2a` branch. At planning time the other checkout was deploying, so initial delivery excluded
+integration, pushes and Render changes. The integration addendum below records
+local main integration authorized after that deployment work completed.
 
 Homeowners edit offers repeatedly. A result must describe the current form, not
 an earlier request. Today ordinary edits leave completed results visible, while
@@ -183,7 +184,25 @@ revision: 21 frontend tests passed, four backend tests passed, production build
 passed. The implementation source hashes match the successful CDP smoke; no
 behavior changes followed that run. See [verification/demo](comparison-freshness-verification.md),
 [interview preparation](interview-preparation.md) and the final evidence manifest.
-A documentation-only commit completes the delivery. Main advanced independently
-while this work was running; it was not checked out, modified or merged here.
+The initial documentation-only commit completed isolated delivery. Main advanced
+independently during that work and was not modified at that stage.
 The clean investigation worktree was disposable; local commits/branch and patch
 retain provenance. No broken branch was published.
+
+### Integration addendum (2026-10-26)
+
+After the user confirmed the deployment agent was done and requested completion,
+inspected both clean worktrees and main's `f4b47c3` deployment evidence. No application
+or deployment configuration had changed upstream. Merged it into the completed
+branch as `35865feb9b3c9c3592bac4de5c50b9fd72ef30b3`, preserving both evidence
+sections without conflicts. Repeated full frontend/backend verification and the
+production-build browser smoke: 21 frontend tests, four backend tests and all 11
+smoke checks passed; production build passed. Added an optional EVIDENCE_DIR override
+to the smoke harness so this run does not overwrite historical artifacts.
+
+Raw results and environment/source fingerprints are retained under
+`../evidence/comparison-freshness/integration/`. Application hashes match the earlier
+verified version. Integrated the completed branch into the clean main checkout
+using a fast-forward; no faulty intermediate commits were included. No push,
+Render setting change or new deployment was performed. The already-public deployment
+is verified at the previous `dfcd22c` revision, not at this integrated release.

@@ -4,8 +4,10 @@
 
 See [requirements, references and investigations](comparison-freshness.md).
 Implementation: `85d66a9`; additional late-error regression: `69e891c`.
-The delivered branch is isolated from main's ongoing Render deployment. No push,
-merge to main, deployment or external publication was performed.
+Initially delivered on an isolated branch while Render deployment was in progress.
+After deployment work completed, its evidence was merged with this release and the
+combined result integrated into local main. No push or redeployment was performed.
+See [integration verification](../evidence/comparison-freshness/integration/verification.json).
 
 ## Reproduce current checks
 
@@ -28,8 +30,8 @@ API on a free port, serves `frontend/dist/frontend/browser`, creates a temporary
 headless Chrome profile and cleans up its child processes. It never uses Render
 or the existing agent's local server. The temporary port reservation has a small
 release/bind race; rerun on a port collision. It writes synthetic smoke artifacts
-under `docs/evidence/comparison-freshness/`; copy historical artifacts first if
-preserving another run. The harness uses Node's built-in WebSocket API (Node 22).
+under `docs/evidence/comparison-freshness/`. Set `EVIDENCE_DIR` to an existing
+alternate directory to retain historical results when repeating the run. The harness uses Node's built-in WebSocket API (Node 22).
 
 For final evidence, commands were run separately with stdout/stderr redirected to
 `final-tests.txt`, `final-build.txt`, `final-backend.txt`. Then:
@@ -123,8 +125,9 @@ makes no claim that its sample outputs were independently financially validated.
 ## Known limitations and next release
 
 - Dependency audit is unresolved and high priority before broader distribution.
-- Local branch only: deployment/default-branch integration requires coordination
-  with the deploying agent. No public Render smoke was performed in this release.
+- Integrated into local main after the deployment agent finished. Not pushed or
+  redeployed. The other agent's public smoke evidence applies to `dfcd22c`, not
+  to the new comparison-freshness frontend.
 - No independent finance oracle, lender validation, user study, timing benchmark,
   adoption, workflow-time reduction or business impact measurement.
 - Mobile, keyboard-only and screen-reader review remain outstanding. `role=status`
@@ -138,4 +141,4 @@ makes no claim that its sample outputs were independently financially validated.
 - Cancellation stops client observation, not guaranteed server computation.
 - No source history was rewritten. The two intentionally faulty/repair commits
   remain on a local investigation branch only; useful regression coverage is on
-  the delivered branch. No claim that main was updated.
+  local main via the completed delivery branch. The broken commits were not merged.

@@ -100,7 +100,15 @@ Implementation revision: `85d66a9ab943238fcce4db029110537e37a22537`.
 Additional regression revision: `69e891c` (full SHA in final manifest).
 Final application source is unchanged from the implementation revision; its hashes
 match the successful smoke record. The later commit adds a test only.
-This delivery remains on `worktree/clear-meadow-4d2a`, not main or Render.
+Initial delivery was isolated on `worktree/clear-meadow-4d2a`. After the deployment
+agent finished, the user authorized completion: main's deployment evidence at
+`f4b47c3` was merged as `35865feb9b3c9c3592bac4de5c50b9fd72ef30b3`, and the
+completed release integrated into local main. Repeated verification passed 21
+frontend tests, four backend tests, the production build and 11 local browser smoke
+checks. [Integration evidence](evidence/comparison-freshness/integration/verification.json)
+retains source hashes, environment and raw logs separately from earlier runs.
+No push/redeployment was performed. Public deployment evidence above applies to
+`dfcd22c`, not the new frontend; no new public-availability claim is made.
 
 Exact environment, full revisions and hashes: [final manifest](evidence/comparison-freshness/final-manifest.json).
 Raw inputs are the synthetic HTTP fixture and eight-field edit table in

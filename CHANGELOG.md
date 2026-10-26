@@ -11,6 +11,7 @@
   browser smoke harness using an isolated local Java API.
 - Document requirements, references, investigations, verification and interview evidence.
 
-This release is on a separate worktree branch, not deployed or integrated into main.
+Integrated into local main after combined-release verification. Not pushed or
+redeployed; the public Render deployment remains the previously verified revision.
 No calculation or API contract changes. Dependency advisories remain unresolved;
 see the [verification record](docs/engineering/comparison-freshness-verification.md).

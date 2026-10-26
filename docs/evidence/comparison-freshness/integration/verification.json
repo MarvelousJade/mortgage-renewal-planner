@@ -1,0 +1,67 @@
+{
+  "recordedAt": "2026-10-26T12:28:37.353Z",
+  "mergedRevision": "35865feb9b3c9c3592bac4de5c50b9fd72ef30b3",
+  "upstreamRevision": "f4b47c34a7dbb239a9066766a94de0e62add85e7",
+  "procedure": [
+    "CHROME_BIN=\"C:/Program Files/Google/Chrome/Application/chrome.exe\" npm run test:ci (in frontend)",
+    "npm run build (in frontend)",
+    "JAVA_HOME=\"C:/Users/FanSh/AppData/Local/paymentops-tools/jdk-21.0.12.1+1\" backend/mvnw -f backend/pom.xml verify",
+    "EVIDENCE_DIR=docs/evidence/comparison-freshness/integration CHROME_BIN=... JAVA_HOME=... node docs/evidence/comparison-freshness/browser-smoke.mjs"
+  ],
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "ramBytes": 17101787136,
+    "node": "v22.23.3",
+    "npm": "12.2.0",
+    "versions": {
+      "@angular/core": "20.3.28",
+      "@angular/cli": "20.3.34",
+      "rxjs": "7.8.2",
+      "typescript": "5.9.3",
+      "karma": "6.4.4"
+    },
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)\r\n"
+  },
+  "results": {
+    "frontend": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "passed": 4,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "productionBuild": "passed",
+    "browserChecks": 11,
+    "browserPassed": true
+  },
+  "sources": {
+    "frontend/src/app/app.ts": "6ba31c84a18440d3adf8d441b8e5906c0009ff22608d2556a6c92f1f34227f64",
+    "frontend/src/app/app.html": "af0f593cbbb512cfcc21b767fc358a3c6e2b6e489a6e1134e92b64a01f78ccdf",
+    "frontend/src/app/comparison-freshness.spec.ts": "fb14e820ab2ba32b937d5dca95005ee1c98963d244d5154f45c0fec6df3fa726",
+    "frontend/package-lock.json": "1158290501227d19f74932a4eb26ab59276b2a0d31c94f7be00fddfef7f0e7ed",
+    "backend/pom.xml": "c20881b6a507afaae1f2d7e243604eff2f8fc7bd8ca7530888704993ac433bec"
+  },
+  "identicalToEarlierVerifiedSources": true,
+  "artifacts": {
+    "backend-verify.txt": "3f9f9aa811f88df6fe186060d63739b7314e57ab1298beb9b383df3483396761",
+    "browser-backend.txt": "a76735b0ba67a7222f8ab5f9c675b624874bd67c945c1cb66fd493bbd04f30a5",
+    "browser-results.png": "89b706b1e2f7dd139c2114b384d8bc35715fe7857fc06ed3d020fe69b76a2377",
+    "browser-run.txt": "e5232f8b96b451b6c12b906488b09e97c5ac8fe53869506a7f726884965caa77",
+    "browser-smoke.json": "e5232f8b96b451b6c12b906488b09e97c5ac8fe53869506a7f726884965caa77",
+    "frontend-build.txt": "0d5dc00d5155f726f3f73076e87995c46b04c7a2736a3e36f8adf38a050fbf07",
+    "frontend-tests.txt": "6f1daa4d9789777a672faf88f04586f2aec3ed938ff3b3d4fe63857b92904518"
+  },
+  "limitations": [
+    "One repeated local verification run, not a benchmark or user study.",
+    "Only harness output-directory configuration was dirty during verification; application source matches earlier verified source hashes.",
+    "No push or new Render deployment. Prior public deployment evidence applies to dfcd22c only.",
+    "Counts transcribed from retained test logs; no independent finance validation."
+  ]
+}
