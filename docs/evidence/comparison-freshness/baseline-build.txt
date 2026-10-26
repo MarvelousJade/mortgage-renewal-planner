@@ -1,0 +1,15 @@
+npm notice run renewal-ready-web@0.0.0 build
+npm notice run ng build
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m  [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mmain-ULK26MKE.js[39m     [2m | [22m[2mmain[22m         [2m | [22m[36m315.06 kB[39m[2m | [22m               [36m81.52 kB[39m
+[32mpolyfills-5CFQRCPP.js[39m[2m | [22m[2mpolyfills[22m    [2m | [22m [36m34.59 kB[39m[2m | [22m               [36m11.33 kB[39m
+[32mstyles-LAJKIV7V.css[39m  [2m | [22m[2mstyles[22m       [2m | [22m[36m683 bytes[39m[2m | [22m              [36m683 bytes[39m
+
+[1m [22m                    [2m | [22m[1mInitial total[22m[2m | [22m[1m350.33 kB[22m[2m | [22m               [1m93.53 kB[22m
+
+Application bundle generation complete. [5.741 seconds] - 2026-10-26T12:05:48.845Z
+
+Output location: C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a\frontend\dist\frontend
+
