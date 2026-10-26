@@ -1,0 +1,59 @@
+npm notice run renewal-ready-web@0.0.0 test:ci
+npm notice run ng test --watch=false --browsers=ChromeHeadless
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m              [2m | [22m[1mNames[22m                         [2m | [22m [1mRaw size[22m
+[32mchunk-AMZPZVJ4.js[39m                [2m | [22m[2m-[22m                             [2m | [22m  [36m2.46 MB[39m[2m | [22m
+[32mpolyfills.js[39m                     [2m | [22m[2mpolyfills[22m                     [2m | [22m  [36m1.04 MB[39m[2m | [22m
+[32mchunk-JPHC333L.js[39m                [2m | [22m[2m-[22m                             [2m | [22m[36m284.14 kB[39m[2m | [22m
+[32mchunk-4LGIRDDJ.js[39m                [2m | [22m[2m-[22m                             [2m | [22m [36m97.55 kB[39m[2m | [22m
+[32mjasmine-cleanup-1.js[39m             [2m | [22m[2mjasmine-cleanup-1[22m             [2m | [22m [36m67.20 kB[39m[2m | [22m
+[32mtest_main.js[39m                     [2m | [22m[2mtest_main[22m                     [2m | [22m [36m42.43 kB[39m[2m | [22m
+[32mchunk-Z7IGXH4Z.js[39m                [2m | [22m[2m-[22m                             [2m | [22m [36m18.05 kB[39m[2m | [22m
+[32mchunk-P6TBIP6O.js[39m                [2m | [22m[2m-[22m                             [2m | [22m [36m12.24 kB[39m[2m | [22m
+[32mspec-comparison-freshness.spec.js[39m[2m | [22m[2mspec-comparison-freshness.spec[22m[2m | [22m  [36m8.19 kB[39m[2m | [22m
+[32mspec-http-xsrf.spec.js[39m           [2m | [22m[2mspec-http-xsrf.spec[22m           [2m | [22m  [36m2.60 kB[39m[2m | [22m
+[32mchunk-3FMBEB3S.js[39m                [2m | [22m[2m-[22m                             [2m | [22m  [36m2.13 kB[39m[2m | [22m
+[32mspec-app.spec.js[39m                 [2m | [22m[2mspec-app.spec[22m                 [2m | [22m  [36m1.38 kB[39m[2m | [22m
+[32mstyles.css[39m                       [2m | [22m[2mstyles[22m                        [2m | [22m[36m954 bytes[39m[2m | [22m
+[32mjasmine-cleanup-0.js[39m             [2m | [22m[2mjasmine-cleanup-0[22m             [2m | [22m[36m519 bytes[39m[2m | [22m
+
+[1m [22m                                [2m | [22m[1mInitial total[22m                 [2m | [22m  [1m4.04 MB[22m
+
+Application bundle generation complete. [1.821 seconds] - 2026-10-26T12:39:25.207Z
+
+[32m26 10 2026 08:39:25.520:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m26 10 2026 08:39:25.521:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[32m26 10 2026 08:39:25.530:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m26 10 2026 08:39:26.496:INFO [Chrome Headless 156.0.0.0 (Windows 10)]: [39mConnected on socket HqauIOuZRxk6oibfAAAA with id 3430537
+Chrome Headless 156.0.0.0 (Windows 10): Executed 0 of 28[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 1 of 28[32m SUCCESS[39m (0 secs / 0.103 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 2 of 28[32m SUCCESS[39m (0 secs / 0.115 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 3 of 28[32m SUCCESS[39m (0 secs / 0.211 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 4 of 28[32m SUCCESS[39m (0 secs / 0.228 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 5 of 28[32m SUCCESS[39m (0 secs / 0.236 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 6 of 28[32m SUCCESS[39m (0 secs / 0.244 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 7 of 28[32m SUCCESS[39m (0 secs / 0.254 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 8 of 28[32m SUCCESS[39m (0 secs / 0.261 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 9 of 28[32m SUCCESS[39m (0 secs / 0.273 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 10 of 28[32m SUCCESS[39m (0 secs / 0.285 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 11 of 28[32m SUCCESS[39m (0 secs / 0.295 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 12 of 28[32m SUCCESS[39m (0 secs / 0.304 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 13 of 28[32m SUCCESS[39m (0 secs / 0.315 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 14 of 28[32m SUCCESS[39m (0 secs / 0.32 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 15 of 28[32m SUCCESS[39m (0 secs / 0.33 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 16 of 28[32m SUCCESS[39m (0 secs / 0.336 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 17 of 28[32m SUCCESS[39m (0 secs / 0.348 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 18 of 28[32m SUCCESS[39m (0 secs / 0.356 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 19 of 28[32m SUCCESS[39m (0 secs / 0.358 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 20 of 28[32m SUCCESS[39m (0 secs / 0.359 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 21 of 28[32m SUCCESS[39m (0 secs / 0.365 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 22 of 28[32m SUCCESS[39m (0 secs / 0.366 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 23 of 28[32m SUCCESS[39m (0 secs / 0.367 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 24 of 28[32m SUCCESS[39m (0 secs / 0.368 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 25 of 28[32m SUCCESS[39m (0 secs / 0.368 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 26 of 28[32m SUCCESS[39m (0 secs / 0.371 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 27 of 28[32m SUCCESS[39m (0 secs / 0.374 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 28 of 28[32m SUCCESS[39m (0 secs / 0.379 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 28 of 28[32m SUCCESS[39m (0.406 secs / 0.379 secs)
+[32mTOTAL: 28 SUCCESS[39m

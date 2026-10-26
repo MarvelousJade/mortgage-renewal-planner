@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-26T12:40:25.381Z",
+  "revision": "7dbe38a920147026297d15e45e445fa1314784c2",
+  "sourceHashes": {
+    "frontend/src/app/app.ts": "6ba31c84a18440d3adf8d441b8e5906c0009ff22608d2556a6c92f1f34227f64",
+    "frontend/src/app/app.html": "af0f593cbbb512cfcc21b767fc358a3c6e2b6e489a6e1134e92b64a01f78ccdf"
+  },
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)\r\n",
+  "node": "v22.23.3",
+  "checks": [
+    {
+      "name": "Java API installation and launch",
+      "passed": true
+    },
+    {
+      "name": "Production Angular assets load and bootstrap",
+      "passed": true
+    },
+    {
+      "name": "Methodology anchor navigation",
+      "passed": true
+    },
+    {
+      "name": "Default two-offer comparison through real Java API",
+      "passed": true
+    },
+    {
+      "name": "Completed results disappear on actual input event",
+      "passed": true
+    },
+    {
+      "name": "Delayed real API response cannot restore stale results after edit",
+      "passed": true
+    },
+    {
+      "name": "Re-comparison uses changed principal",
+      "passed": true
+    },
+    {
+      "name": "Repeated add/compare/remove workflows",
+      "passed": true
+    },
+    {
+      "name": "Injected local 503 preserves inputs and retry succeeds",
+      "passed": true
+    },
+    {
+      "name": "Invalid balance displays feedback and sends no API request",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser runtime exceptions",
+      "passed": true
+    }
+  ],
+  "warnings": [
+    "Programmatic browser interaction, not human usability testing; delayed/error responses are local proxy fixtures."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.47",
+    "revision": "@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.19"
+  },
+  "passed": true,
+  "browserErrors": []
+}

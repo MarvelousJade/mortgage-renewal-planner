@@ -1,0 +1,139 @@
+{
+  "recordedAt": "2026-10-26T12:41:45.169Z",
+  "baselineRevision": "ce9922763410fb8d7b5801f4ad38ad39e795f659",
+  "measuredRevision": "7dbe38a920147026297d15e45e445fa1314784c2",
+  "workingTree": "M .github/workflows/ci.yml\n M Jenkinsfile\n M frontend/package-lock.json\n M frontend/package.json\n?? docs/evidence/dependency-remediation/audit-after-failed-update.json\n?? docs/evidence/dependency-remediation/audit-after.json\n?? docs/evidence/dependency-remediation/audit-gate.txt\n?? docs/evidence/dependency-remediation/audit-production-after-failed-update.json\n?? docs/evidence/dependency-remediation/audit-production-after.json\n?? docs/evidence/dependency-remediation/backend-verify.txt\n?? docs/evidence/dependency-remediation/baseline-clean-install.txt\n?? docs/evidence/dependency-remediation/browser-backend.txt\n?? docs/evidence/dependency-remediation/browser-results.png\n?? docs/evidence/dependency-remediation/browser-run.txt\n?? docs/evidence/dependency-remediation/browser-smoke.json\n?? docs/evidence/dependency-remediation/build-after.txt\n?? docs/evidence/dependency-remediation/clean-install-first-failure.txt\n?? docs/evidence/dependency-remediation/clean-install.txt\n?? docs/evidence/dependency-remediation/lock-version-changes.json\n?? docs/evidence/dependency-remediation/package-remediation.json\n?? docs/evidence/dependency-remediation/resolve-clean-lock.txt\n?? docs/evidence/dependency-remediation/summarize.mjs\n?? docs/evidence/dependency-remediation/tests-after-missing-origin.txt\n?? docs/evidence/dependency-remediation/tests-after.txt\n?? docs/evidence/dependency-remediation/tree-after-failed-update.json\n?? docs/evidence/dependency-remediation/tree-after-stderr.txt\n?? docs/evidence/dependency-remediation/tree-after.json\n?? docs/evidence/dependency-remediation/update-angular.txt\n?? docs/evidence/dependency-remediation/update-lock-first-failure.txt\n?? docs/evidence/dependency-remediation/xsrf-before-with-origin.txt\n?? docs/evidence/dependency-remediation/xsrf-before.txt\n?? frontend/src/app/http-xsrf.spec.ts",
+  "sources": {
+    "frontend/package.json": "5d9a2728fc0eb011ca646a5bd9d676cbb281d3bc6626393e86c1cd9517148613",
+    "frontend/package-lock.json": "fb117fb36aeddb191f5111ab278753323c48c48d2bb9fc59d6b2bfdde89630c4",
+    "frontend/src/app/app.ts": "6ba31c84a18440d3adf8d441b8e5906c0009ff22608d2556a6c92f1f34227f64",
+    "frontend/src/app/app.html": "af0f593cbbb512cfcc21b767fc358a3c6e2b6e489a6e1134e92b64a01f78ccdf",
+    "frontend/src/app/http-xsrf.spec.ts": "0bdba5d7036ded91a46e742d8cdf068e8ae5d93875147ae1907378b1acc3e45b",
+    ".github/workflows/ci.yml": "8768ee41cb2d210708ba98a09663c78411cd547c92d2fc5ad89271a005dbb9cb",
+    "Jenkinsfile": "adde93a1bee0d4aa0cd5890fc81eb1bcaf92c93cb85641c8e20da12065b17e10"
+  },
+  "artifacts": {
+    "angular-build-versions.json": "9701d1eb02c366e869e91e270b93b0856bdbd5fabcdc9c4934d817eac1eaee61",
+    "angular-cli-versions.json": "9701d1eb02c366e869e91e270b93b0856bdbd5fabcdc9c4934d817eac1eaee61",
+    "angular-core-versions.json": "cc0e7e51041e128a03e0e443501b3986c5cad8dbd5f400d6744d3048f08689da",
+    "audit-after-failed-update.json": "04306aeb515dfa0085f58084e4386487cdd989f793c7b71b5f656b7cb021d221",
+    "audit-after.json": "e9b3717a3c06cf6fa13788fba3e5efdfebaab2680c040517a4265bc27a305ebe",
+    "audit-before.json": "5e0f9371dd76e0ecfdeaa88c5fe31b9920114ad05ab725e5c19914e23e5e2a23",
+    "audit-gate.txt": "27ddb54606b120a9631460f6d5c98c351f673a3dcf58c15c3816d22d02e8498a",
+    "audit-production-after-failed-update.json": "fcd779f161125291dc2577d6c7278510a386e7ce3bd7e4b0dcc36c3176acc3a6",
+    "audit-production-after.json": "e9b3717a3c06cf6fa13788fba3e5efdfebaab2680c040517a4265bc27a305ebe",
+    "audit-production-before.json": "68772628839de6d97fe4b8f66ecc53f0d8ae087d57e48b24f88be6549ae2c544",
+    "backend-verify.txt": "01d84e171339095320e8904276821724d990e90fedfcafb73751762e2911e0ad",
+    "baseline-build.txt": "699e422de0a1837466eb356506276dbd71bda898e7436495d1ffe8c5b17c3efd",
+    "baseline-clean-install.txt": "b207fdc86f93cbf59806ff56df505755afd038457edf58a59e851e73bb2df290",
+    "baseline-tests.txt": "ad0a69564e89b145e926bcc7e2893ca81ba04fda3de1e41f33220c222d4a1e57",
+    "browser-backend.txt": "285e4ebd76fe47e15a2564a44696e098f71041347b4c8ddaa648df6880b5f067",
+    "browser-results.png": "d08bd9ffd193e9ddab1800e722b528b6e3b4438300ccf6f7310c7004082fca94",
+    "browser-run.txt": "ec0aef817ddd331ad12faf76b4971cbbe9b8a8b0f3f8bebc84e03f7dd171fb40",
+    "browser-smoke.json": "ec0aef817ddd331ad12faf76b4971cbbe9b8a8b0f3f8bebc84e03f7dd171fb40",
+    "build-after.txt": "12e7dfa305702f7d00dab3744e819e066c9444e41bcd0e39623ec97c41e06379",
+    "build-metadata.json": "185ffdfbf678ce3ef19e613177f33cdf1f35a063e3ebd249ae89855ab5d2cbbf",
+    "clean-install-first-failure.txt": "2458876e98dcc4abcdaf778cae570e9bb0a6d423bc4930f50bb1a87160dbcc2e",
+    "clean-install.txt": "aae9320d7628f48f712e574164593474d5f3d941c43553ad910bc67faabeb6de",
+    "cli-metadata.json": "09e5373eb6263d5ad91179730d9f8203ac10f2188431f43683eeb215ffdfb431",
+    "core-metadata.json": "7320eb446c362f67447603e51763ac3d4b3482635723f2f982ca3db609768cb0",
+    "fix-plan.json": "1322a03e626bb6a13937f3bcabedac0fa64ea4659de7e3d0c9686eb509e2687d",
+    "lock-version-changes.json": "8f9770be0d839dab514bce1b2590b8a76840e9fa7eccd803844a2cb9af78c0f4",
+    "package-remediation.json": "b79c8171f1af683d2aaa110fb31a38c4d8e28d1a7cc57a50c7224aa8aef38f12",
+    "resolve-clean-lock.txt": "77604ed5a6d58de0568abd1d5be22961609b9b8a193a56f2b84384f10a824dd7",
+    "summarize.mjs": "2793bc15fde1f68c0144d5a16b54ef3998cb59cc698193b30a25ecf5a6b2bb46",
+    "tests-after-missing-origin.txt": "87a9609d258f8f47aa908961c3c453890d93aab0d306db74ed03dc2ddcf36249",
+    "tests-after.txt": "0b546ac975a318f148553a8e74852bdcdb9dfb7952fbb9128dfd1987ba839291",
+    "tree-after-failed-update.json": "dea351db2b26d12ff04c3c8e644e9fd42ad564616147e14a1e51ff91d4d0003f",
+    "tree-after-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tree-after.json": "153c8ef3cd8f279100ef8d61c744718b79f5dddbdc3d2c4d16d85114339a8cb9",
+    "tree-before.json": "4f2f36eb5a14da39cc23ec26a87984eacccf4247e53de350163379f5b5efbdc3",
+    "update-angular.txt": "65bf34b20a5baf80b69a1c4112fc3dcc2ef7d38cfec657b7134cfc65319b4daa",
+    "update-lock-first-failure.txt": "000b4f67d560cc4cc6996f6fbc05fca4a560d3f8007cf0dcb848480727f657c8",
+    "xsrf-before-with-origin.txt": "4a81c47b0b06feeffb06ea5452b339fd97383d62da68aec793a45b2cb93b62b8",
+    "xsrf-before.txt": "a1360939f13401f24c8e14a6b8179e0ee9f37386a4ababee4659205b22f6a687"
+  },
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "ramBytes": 17101787136,
+    "node": "v22.23.3",
+    "npm": "12.2.0",
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)\r\n",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.47",
+      "revision": "@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.19"
+    }
+  },
+  "results": {
+    "fullAudit": {
+      "before": {
+        "info": 0,
+        "low": 0,
+        "moderate": 6,
+        "high": 13,
+        "critical": 3,
+        "total": 22
+      },
+      "after": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    "productionAudit": {
+      "before": {
+        "info": 0,
+        "low": 0,
+        "moderate": 3,
+        "high": 1,
+        "critical": 0,
+        "total": 4
+      },
+      "after": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    "same28Cases": {
+      "before": {
+        "passed": 24,
+        "failed": 4
+      },
+      "after": {
+        "passed": 28,
+        "failed": 0
+      }
+    },
+    "backend": {
+      "passed": 4,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "smoke": {
+      "passed": 11,
+      "failed": 0
+    },
+    "build": "passed (build-after.txt)",
+    "dependencyTree": "npm ls exited 0 (tree-after.json)"
+  },
+  "limits": [
+    "Known npm registry findings, not a proof of universal security or production exploitability.",
+    "One run per final condition; synthetic transport/XSRF fixtures; no financial or performance claim.",
+    "No Maven/container vulnerability scan, Linux build, remote CI execution or new Render deployment.",
+    "Clean npm ci succeeded under local npm 12 lifecycle approval policy; retained warnings disclose blocked install scripts."
+  ]
+}

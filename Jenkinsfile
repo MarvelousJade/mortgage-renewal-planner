@@ -26,6 +26,7 @@ pipeline {
                     steps {
                         dir('frontend') {
                             sh 'npm ci'
+                            sh 'npm run audit:dependencies'
                             sh 'npm run build'
                             sh 'npm run test:ci -- --no-progress'
                         }

@@ -1,0 +1,71 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< ca.renewalready:backend >-----------------------
+[INFO] Building RenewalReady API 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ backend ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ca.renewalready.api.calculation.MortgageCalculationServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.393 s -- in ca.renewalready.api.calculation.MortgageCalculationServiceTest
+[INFO] Running ca.renewalready.api.RenewalReadyApiApplicationTests
+08:38:02.139 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ca.renewalready.api.RenewalReadyApiApplicationTests]: RenewalReadyApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:38:02.313 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ca.renewalready.api.RenewalReadyApiApplication for test class ca.renewalready.api.RenewalReadyApiApplicationTests
+08:38:02.430 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ca.renewalready.api.RenewalReadyApiApplicationTests]: RenewalReadyApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:38:02.432 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ca.renewalready.api.RenewalReadyApiApplication for test class ca.renewalready.api.RenewalReadyApiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-10-26T08:38:02.850-04:00  INFO 24520 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : Starting RenewalReadyApiApplicationTests using Java 21.0.12.1 with PID 24520 (started by FanSh in C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a\backend)
+2026-10-26T08:38:02.851-04:00  INFO 24520 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-10-26T08:38:04.865-04:00  INFO 24520 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-10-26T08:38:04.943-04:00  INFO 24520 --- [           main] c.r.api.RenewalReadyApiApplicationTests  : Started RenewalReadyApiApplicationTests in 2.45 seconds (process running for 4.867)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\FanSh\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.10\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.547 s -- in ca.renewalready.api.RenewalReadyApiApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ backend ---
+[INFO] 
+[INFO] --- spring-boot:4.1.0:repackage (repackage) @ backend ---
+[INFO] Replacing main artifact C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a\backend\target\backend-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\FanSh\.herdr\worktrees\mortgage-renewal-planner\worktree-clear-meadow-4d2a\backend\target\backend-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.817 s
+[INFO] Finished at: 2026-10-26T08:38:06-04:00
+[INFO] ------------------------------------------------------------------------

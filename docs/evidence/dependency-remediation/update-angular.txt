@@ -1,0 +1,27 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: renewal-ready-web@0.0.0
+npm error Found: @angular/common@20.3.28
+npm error node_modules/@angular/common
+npm error   @angular/common@"^20.3.34" from the root project
+npm error   peer @angular/common@"20.3.28" from @angular/forms@20.3.28
+npm error   node_modules/@angular/forms
+npm error     @angular/forms@"^20.3.34" from the root project
+npm error   2 more (@angular/platform-browser, @angular/router)
+npm error
+npm error Could not resolve dependency:
+npm error @angular/common@"^20.3.34" from the root project
+npm error
+npm error Conflicting peer dependency: @angular/core@20.3.34
+npm error node_modules/@angular/core
+npm error   peer @angular/core@"20.3.34" from @angular/common@20.3.34
+npm error   node_modules/@angular/common
+npm error     @angular/common@"^20.3.34" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\FanSh\AppData\Local\npm-cache\_logs\2026-10-26T12_35_46_857Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\FanSh\AppData\Local\npm-cache\_logs\2026-10-26T12_35_46_857Z-debug-0.log
