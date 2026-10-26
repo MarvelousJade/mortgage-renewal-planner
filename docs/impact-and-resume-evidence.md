@@ -60,8 +60,30 @@ No Docker daemon was available locally, so Linux container correctness and
 public availability remain unverified until Render builds and smoke checks pass.
 No latency benchmark, adoption, workflow saving, or business outcome was measured.
 
-Claim status: **preliminary** deployment capability only; no quantitative resume claim.
-Public deployment outcome will be recorded separately after verification.
+Public deployment verified at 2026-10-26T12:04–12:05Z:
+https://renewalready.onrender.com, service `srv-dbfk048m7kps739d44bg`,
+live deploy `dep-dbfk2rei0phs73avlmp0`, source
+`dfcd22ce6fd4e9433c58a2ae6c89110ee5b535ed`. Actual Linux container build
+passed on Render. [Public smoke results](evidence/render-deployment/public-smoke.json)
+verify HTML, referenced JS/CSS assets, health UP, and one synthetic comparison with
+all calculation fields equal to the saved baseline. This does not exercise a browser
+interaction or establish general financial accuracy. Actual public JVM build is in
+[Render logs](evidence/render-deployment/render-logs.json); image tags are not pinned.
+[Service configuration](evidence/render-deployment/render-service.json) confirms
+`plan: free`; buildPlan is an independent Render build setting, not the service price.
+The account's other free services share usage limits; no guarantee of zero future
+account-level charges or uptime is made.
+
+First deployment was canceled after an initial public request timed out. Git Bash
+had converted the CLI health path into a Windows filesystem path during creation.
+The health path was corrected using `MSYS_NO_PATHCONV=1`, and a fresh deploy was
+started (the in-flight first deploy retained its original configuration).
+[First public attempt](evidence/render-deployment/public-smoke-first-attempt.json)
+and [deploy records](evidence/render-deployment/render-deploys.json) retain the
+unfavorable attempt and subsequent success. This is not a measured recovery-time claim.
+
+Claim status: **verified** public deployment capability on the stated revision/date;
+no quantitative impact or personal-contribution resume claim is supported.
 
 ## Comparison freshness increment (2026-10-26)
 
