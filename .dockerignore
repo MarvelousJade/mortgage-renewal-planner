@@ -1,0 +1,9 @@
+.git
+**/node_modules
+**/dist
+**/.angular
+**/target
+docs
+**/*.log
+.env
+.env.*

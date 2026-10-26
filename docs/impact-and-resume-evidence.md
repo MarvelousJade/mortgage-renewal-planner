@@ -31,6 +31,38 @@ npm run test:ci
 
 Acceptance before a quantitative resume claim: reproducible fixtures/commands, complete raw results, full measured SHA and runtime/tool/hardware identity, independent output checks, and limitations. Java 21/Node 22 are documented requirements; build timings would measure developer tooling rather than user/business impact. The strongest current resume content is the concrete comparison capability and transparent calculation design; outcome measurements are follow-up work.
 
+## Render deployment increment (2026-10-26)
+
+Scope: root Dockerfile embeds the production Angular build into the Spring Boot
+static resources; free-plan blueprint and deployment instructions. No database,
+calculation, account, or saving feature was added. Agent-authored deployment work
+does not establish the repository owner's personal contribution.
+
+Baseline revision: `1061cd23d3e4a80f2fc69122040c6ebac2c9afa8`, initially clean.
+Delivered revision: the commit containing this section (resolve with Git).
+Preplanned acceptance: [deployment plan](evidence/render-deployment-plan.md).
+Raw procedure/results: [verification script](evidence/render-deployment/check.mjs),
+[local HTTP results](evidence/render-deployment/local-smoke.json),
+[baseline response](evidence/render-deployment/baseline-comparison.json), and build
+logs in `docs/evidence/render-deployment/`. Baseline response was captured from
+the pre-existing running release at 11:49:43Z, with the script's same synthetic fixture.
+It is a prebuilt artifact, not a newly rebuilt baseline SHA; its precise build provenance
+is unverified. Timestamp `generatedAt` is excluded from equality; all calculation
+fields must match. This is one smoke fixture, not independent financial validation.
+
+Environment: Windows, Node v22.23.3, JDK 21.0.12.1; CPU/RAM/OS and HTTP
+bodies are retained in the smoke JSON. Angular production build passed. All four
+backend tests passed initially, but packaging failed because the locally running
+JAR was locked on Windows; that unfavorable log is retained. Repeating verification
+in an isolated temporary staging directory with the built Angular assets included
+passed. The native staged JAR served HTML, JS/CSS, health, and the comparison.
+No Docker daemon was available locally, so Linux container correctness and
+public availability remain unverified until Render builds and smoke checks pass.
+No latency benchmark, adoption, workflow saving, or business outcome was measured.
+
+Claim status: **preliminary** deployment capability only; no quantitative resume claim.
+Public deployment outcome will be recorded separately after verification.
+
 ## Measurement policy for future changes
 
 Choose one or two useful metrics during planning and record acceptance criteria before implementation. Measure the old version first; for new functionality use an initial implementation or a defined manual workflow. Compare equivalent inputs, environments and required outputs. Without a defensible comparator, report an absolute result. Test totals, lines of code and commits are verification/scope evidence, not user impact.

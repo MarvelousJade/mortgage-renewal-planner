@@ -60,6 +60,27 @@ docker compose up --build
 
 Open http://localhost:4200. Nginx serves the Angular build and proxies `/api` to Spring Boot.
 
+## Deploy to Render (no database)
+
+The root `Dockerfile` builds Angular and packages its static assets inside Spring Boot.
+One same-origin web service serves both the website and `/api`; no database, CORS
+configuration, Nginx proxy, or runtime secrets are needed. Existing local Compose
+and separate development servers are unchanged.
+
+Use the root `render.yaml` as a Render Blueprint, or create a Docker web service
+from this repository with root directory left blank, Dockerfile `./Dockerfile`,
+plan **Free**, and health check `/actuator/health`. Render supplies `PORT`.
+The application currently has no client-side routes beyond `/`; adding routes
+later requires a suitable server-side SPA fallback.
+
+Free web services sleep after 15 minutes without requests and have shared workspace
+usage limits. They are suitable for demos, not an always-on production guarantee.
+Do not select a paid plan unless you intend to pay. See [Render free limits](https://render.com/docs/free).
+
+GitHub CLI browser sign-in: `gh auth login --hostname github.com --git-protocol https --web`.
+Confirm with `gh auth status`. Git may already authenticate separately through
+Windows Credential Manager.
+
 ## Example API request
 
 ```bash

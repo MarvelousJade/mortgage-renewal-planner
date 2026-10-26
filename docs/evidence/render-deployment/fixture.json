@@ -1,0 +1,14 @@
+{
+  "principal": 425000,
+  "remainingAmortizationMonths": 264,
+  "offers": [
+    {
+      "name": "Current lender",
+      "annualInterestRate": 4.79,
+      "termMonths": 60,
+      "paymentFrequency": "MONTHLY",
+      "lumpSumPayment": 0,
+      "additionalPaymentPerPeriod": 0
+    }
+  ]
+}

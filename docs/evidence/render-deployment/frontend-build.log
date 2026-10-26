@@ -1,0 +1,20 @@
+npm notice run renewal-ready-web@0.0.0 build
+npm notice run ng build
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m  [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mmain-ULK26MKE.js[39m     [2m | [22m[2mmain[22m         [2m | [22m[36m315.06 kB[39m[2m | [22m               [36m81.52 kB[39m
+[32mpolyfills-5CFQRCPP.js[39m[2m | [22m[2mpolyfills[22m    [2m | [22m [36m34.59 kB[39m[2m | [22m               [36m11.33 kB[39m
+[32mstyles-LAJKIV7V.css[39m  [2m | [22m[2mstyles[22m       [2m | [22m[36m683 bytes[39m[2m | [22m              [36m683 bytes[39m
+
+[1m [22m                    [2m | [22m[1mInitial total[22m[2m | [22m[1m350.33 kB[22m[2m | [22m               [1m93.53 kB[22m
+
+Application bundle generation complete. [3.445 seconds] - 2026-10-26T11:53:24.197Z
+
+Output location: E:\C++ PROJECTS\mortgage-renewal-planner\frontend\dist\frontend
+
+npm notice
+npm notice New patch version of npm available! 12.2.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
