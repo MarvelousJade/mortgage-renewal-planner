@@ -1,0 +1,16 @@
+diff --git a/frontend/src/app/app.ts b/frontend/src/app/app.ts
+index 10c8d04..16b9e3b 100644
+--- a/frontend/src/app/app.ts
++++ b/frontend/src/app/app.ts
+@@ -80,8 +80,9 @@ export class App {
+   }
+ 
+   compareOffers(): void {
+-    // Cancel first: the old request's finalize must run before new loading starts.
+-    this.clearResults();
++    // Isolated intentional fault: clear the display without superseding HTTP work.
++    this.comparison.set(null);
++    this.errorMessage.set('');
+ 
+     if (this.form.invalid) {
+       this.form.markAllAsTouched();

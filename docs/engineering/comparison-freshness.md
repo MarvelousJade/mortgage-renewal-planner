@@ -136,4 +136,41 @@ remediation is a separate high-priority release requiring compatibility review.
 Successful builds/tests do not establish dependency security.
 
 Fix revision: resolve the commit titled `fix: invalidate comparisons and cancel obsolete requests`.
-Controlled-fault provenance and final verification follow below as executed.
+### BUG-CONTROL-01: obsolete service errors overwrite current status
+
+This fault was **intentionally introduced locally**, not discovered in production.
+Invariant: an obsolete request must be unable to change results, errors or loading.
+Start: verified working `85d66a9ab943238fcce4db029110537e37a22537`.
+Isolated branch/worktree: `investigation/comparison-supersession` in a sibling
+directory, never published or merged into the delivery branch.
+
+Fault commit: `e7f279a` (resolve full SHA with Git); preserved patch:
+`../evidence/comparison-freshness/intentional-fault.patch`. Replaced submission's
+clearResults() with display/error clearing alone, leaving edit invalidation intact.
+This models an incomplete refactor of the submission path.
+
+Initial hypothesis: missing supersession lets both subscriptions remain active.
+Alternative: edit invalidation broke. The full suite distinguished them: edit
+cases continued to pass, while repeated submission and the strengthened obsolete
+error case failed. Reproduction: submit A, submit B, flush B successfully, then
+flush A with 503. Actual faulty state: current result remains, but obsolete failure
+appears in the error banner. Expected: A is canceled; no obsolete error appears.
+HttpTestingController showed A.cancelled=false and the obsolete error text.
+The original repeat-response case also detected old results overwriting new ones.
+
+Added a dedicated late-error regression in the isolated worktree. The run produced
+**2 failures, 19 passes, 0 skipped** (raw `intentional-fault-failing.txt`). Restored
+submission cancellation exactly from the verified commit; all **21 tests passed**
+(`intentional-fault-repaired.txt`). Repair/test commit: `3c690af`. This repair
+returns implementation to its pre-fault state. Only the additional regression
+coverage and investigation evidence are integrated into the delivery branch;
+there is no new implementation fix or production incident to claim here.
+
+Prevention: test both late success and late failure, not just result clearing.
+Cancellation is a state-ownership guarantee. Keep all submission invalidation in
+one helper, and preserve cancellation-before-new-loading ordering. Runtime smoke
+on the working implementation covers delayed real API success after edits; the
+intentional repeated-submission fault was exercised in browser-hosted Angular
+HTTP tests, not injected into a deployed service. Remaining limitation: the UI's
+disabled submit button normally prevents repeated mouse submission; the method
+still needs deterministic supersession for programmatic/reentrant callers.

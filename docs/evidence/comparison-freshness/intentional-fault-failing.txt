@@ -1,0 +1,68 @@
+npm notice run renewal-ready-web@0.0.0 test:ci
+npm notice run ng test --watch=false --browsers=ChromeHeadless
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m              [2m | [22m[1mNames[22m                         [2m | [22m [1mRaw size[22m
+[32mchunk-S757DYLW.js[39m                [2m | [22m[2m-[22m                             [2m | [22m  [36m2.46 MB[39m[2m | [22m
+[32mpolyfills.js[39m                     [2m | [22m[2mpolyfills[22m                     [2m | [22m  [36m1.04 MB[39m[2m | [22m
+[32mchunk-YOYVDZXJ.js[39m                [2m | [22m[2m-[22m                             [2m | [22m[36m380.65 kB[39m[2m | [22m
+[32mjasmine-cleanup-1.js[39m             [2m | [22m[2mjasmine-cleanup-1[22m             [2m | [22m [36m67.20 kB[39m[2m | [22m
+[32mtest_main.js[39m                     [2m | [22m[2mtest_main[22m                     [2m | [22m [36m59.92 kB[39m[2m | [22m
+[32mspec-comparison-freshness.spec.js[39m[2m | [22m[2mspec-comparison-freshness.spec[22m[2m | [22m [36m20.03 kB[39m[2m | [22m
+[32mchunk-3FMBEB3S.js[39m                [2m | [22m[2m-[22m                             [2m | [22m  [36m2.13 kB[39m[2m | [22m
+[32mspec-app.spec.js[39m                 [2m | [22m[2mspec-app.spec[22m                 [2m | [22m  [36m1.34 kB[39m[2m | [22m
+[32mstyles.css[39m                       [2m | [22m[2mstyles[22m                        [2m | [22m[36m954 bytes[39m[2m | [22m
+[32mjasmine-cleanup-0.js[39m             [2m | [22m[2mjasmine-cleanup-0[22m             [2m | [22m[36m519 bytes[39m[2m | [22m
+
+[1m [22m                                [2m | [22m[1mInitial total[22m                 [2m | [22m  [1m4.04 MB[22m
+
+Application bundle generation complete. [2.404 seconds] - 2026-10-26T12:17:21.119Z
+
+[32m26 10 2026 08:17:21.498:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m26 10 2026 08:17:21.500:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[32m26 10 2026 08:17:21.507:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m26 10 2026 08:17:22.582:INFO [Chrome Headless 156.0.0.0 (Windows 10)]: [39mConnected on socket _XS1dvYl89BRxoWtAAAB with id 65261230
+Chrome Headless 156.0.0.0 (Windows 10): Executed 0 of 21[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 1 of 21[32m SUCCESS[39m (0 secs / 0.11 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 2 of 21[32m SUCCESS[39m (0 secs / 0.213 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 3 of 21[32m SUCCESS[39m (0 secs / 0.222 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 4 of 21[32m SUCCESS[39m (0 secs / 0.237 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 5 of 21[32m SUCCESS[39m (0 secs / 0.248 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 6 of 21[32m SUCCESS[39m (0 secs / 0.259 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 7 of 21[32m SUCCESS[39m (0 secs / 0.266 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 8 of 21[32m SUCCESS[39m (0 secs / 0.277 secs)
+[1A[2K[31mChrome Headless 156.0.0.0 (Windows 10) Comparison freshness ignores an obsolete service failure after a newer comparison succeeds FAILED[39m
+	Expected 'Obsolete service failure' to be ''.
+	    at <Jasmine>
+	    at UserContext.<anonymous> (src/app/comparison-freshness.spec.ts:117:32)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+	    at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+Chrome Headless 156.0.0.0 (Windows 10): Executed 9 of 21[31m (1 FAILED)[39m (0 secs / 0.286 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 10 of 21[31m (1 FAILED)[39m (0 secs / 0.297 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 11 of 21[31m (1 FAILED)[39m (0 secs / 0.306 secs)
+[1A[2K[31mChrome Headless 156.0.0.0 (Windows 10) Comparison freshness supersedes a repeated submission without an old response overwriting the new one FAILED[39m
+	Expected false to be true.
+	    at <Jasmine>
+	    at UserContext.<anonymous> (src/app/comparison-freshness.spec.ts:99:29)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+	    at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+	Expected $.generatedAt = '2026-10-26T00:00:00Z' to equal '2026-10-26T00:01:00Z'.
+	    at <Jasmine>
+	    at UserContext.<anonymous> (src/app/comparison-freshness.spec.ts:104:30)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+	    at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+	    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+Chrome Headless 156.0.0.0 (Windows 10): Executed 12 of 21[31m (2 FAILED)[39m (0 secs / 0.312 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 13 of 21[31m (2 FAILED)[39m (0 secs / 0.318 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 14 of 21[31m (2 FAILED)[39m (0 secs / 0.328 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 15 of 21[31m (2 FAILED)[39m (0 secs / 0.34 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 16 of 21[31m (2 FAILED)[39m (0 secs / 0.354 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 17 of 21[31m (2 FAILED)[39m (0 secs / 0.361 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 18 of 21[31m (2 FAILED)[39m (0 secs / 0.368 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 19 of 21[31m (2 FAILED)[39m (0 secs / 0.372 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 20 of 21[31m (2 FAILED)[39m (0 secs / 0.383 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 21 of 21[31m (2 FAILED)[39m (0 secs / 0.386 secs)
+[1A[2KChrome Headless 156.0.0.0 (Windows 10): Executed 21 of 21[31m (2 FAILED)[39m (0.414 secs / 0.386 secs)
+[31mTOTAL: 2 FAILED, 19 SUCCESS[39m

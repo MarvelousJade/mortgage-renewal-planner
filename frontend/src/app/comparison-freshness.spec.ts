@@ -105,6 +105,20 @@ describe('Comparison freshness', () => {
     expect(app.loading()).toBeFalse();
   });
 
+  it('ignores an obsolete service failure after a newer comparison succeeds', () => {
+    app.compareOffers();
+    const obsolete = http.expectOne(url);
+    app.compareOffers();
+    http.expectOne(url).flush(response);
+    if (!obsolete.cancelled) {
+      obsolete.flush({ message: 'Obsolete service failure' }, { status: 503, statusText: 'Unavailable' });
+    }
+    expect(obsolete.cancelled).toBeTrue();
+    expect(app.errorMessage()).toBe('');
+    expect(app.comparison()).toEqual(response);
+    expect(app.loading()).toBeFalse();
+  });
+
   it('cancels pending HTTP work when the component is destroyed', () => {
     app.compareOffers();
     const request = http.expectOne(url);
